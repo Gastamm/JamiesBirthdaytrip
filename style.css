@@ -1,0 +1,130 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.start-btn,
+.next-btn,
+.back-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #333;
+    transition: 0.2s;
+}
+
+.start-btn:hover,
+.next-btn:hover,
+.back-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* PAGE TITLES */
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.page-subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* CHOICE CARDS */
+.choices-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.choice-card {
+    width: 300px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.choice-card:hover {
+    transform: scale(1.03);
+}
+
+.choice-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.choice-card h2 {
+    margin: 15px 0 5px;
+}
+
+.choice-card p {
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+.external-link {
+    display: block;
+    padding: 10px;
+    background: #f7f7f7;
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+}
+
+/* NAVIGATION BUTTONS */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
