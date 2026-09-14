@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Options</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1 class="page-title">Day 3 — A Gentle Farewell to Beaufort</h1>
+    <p class="page-subtitle">Checkout is at 11 AM, so choose how you want to enjoy your final morning.</p>
+
+    <!-- BREAKFAST -->
+    <h2 class="page-title" style="margin-top:40px;">Breakfast</h2>
+    <div class="choices-container">
+
+        <div class="choice-card" onclick="saveChoice('day3_breakfast', 'Beaufort Coffee Shop')">
+            <h2>Beaufort Coffee Shop</h2>
+            <p>Light pastries and a warm morning start.</p>
+            <a href="https://www.beaufortcoffeeshop.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_breakfast', 'Cru Bar & Coffee Shop')">
+            <h2>Cru Bar & Coffee Shop</h2>
+            <p>Espresso and a cozy vibe before checkout.</p>
+            <a href="https://crubar.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_breakfast', 'Aqua Bakery')">
+            <h2>Aqua Bakery</h2>
+            <p>Fresh baked goods and a relaxed start.</p>
+            <a href="https://aquabeaufort.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+    </div>
+
+    <!-- CHECKOUT -->
+    <h2 class="page-title" style="margin-top:40px;">Checkout</h2>
+    <div class="choices-container">
+
+        <div class="choice-card" onclick="saveChoice('day3_checkout', 'Checkout at 11 AM')">
+            <h2>Checkout at 11 AM</h2>
+            <p>Pack up, check out, and get ready for a relaxing final few hours.</p>
+        </div>
+
+    </div>
+
+    <!-- LATE MORNING ACTIVITIES -->
+    <h2 class="page-title" style="margin-top:40px;">Late Morning Activities</h2>
+    <p class="page-subtitle">Choose something light before lunch and heading home.</p>
+
+    <div class="choices-container">
+
+        <div class="choice-card" onclick="saveChoice('day3_morning', 'Walk the Waterfront')">
+            <h2>Walk the Waterfront</h2>
+            <p>A gentle stroll to soak in the last views.</p>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_morning', 'Visit Maritime Museum')">
+            <h2>NC Maritime Museum</h2>
+            <p>A quick visit to Beaufort’s coastal history.</p>
+            <a href="https://www.ncmaritimemuseumbeaufort.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_morning', 'Browse Local Shops')">
+            <h2>Browse Local Shops</h2>
+            <p>Pick up a souvenir or enjoy the charming downtown.</p>
+        </div>
+
+    </div>
+
+    <!-- LUNCH -->
+    <h2 class="page-title" style="margin-top:40px;">Lunch</h2>
+    <p class="page-subtitle">Your final Beaufort meal before heading home.</p>
+
+    <div class="choices-container">
+
+        <div class="choice-card" onclick="saveChoice('day3_lunch', 'Finz Grill')">
+            <h2>Finz Grill</h2>
+            <p>Waterfront lunch with casual coastal vibes.</p>
+            <a href="https://finzbeaufort.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_lunch', 'Black Sheep')">
+            <h2>Black Sheep</h2>
+            <p>Pizza, salads, and a great marina view.</p>
+            <a href="https://blacksheepbeaufort.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_lunch', 'Clawson’s 1905')">
+            <h2>Clawson’s 1905</h2>
+            <p>A Beaufort classic for a hearty lunch.</p>
+            <a href="https://clawsons1905.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+    </div>
+
+    <!-- ON THE WAY HOME -->
+    <h2 class="page-title" style="margin-top:40px;">On the Way Home</h2>
+    <p class="page-subtitle">Choose a final stop or head straight home.</p>
+
+    <div class="choices-container">
+
+        <div class="choice-card" onclick="saveChoice('day3_exit', 'Fort Macon State Park')">
+            <h2>Fort Macon State Park</h2>
+            <p>A quick historical stop on the drive out.</p>
+            <a href="https://www.ncparks.gov/fort-macon-state-park" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_exit', 'Atlantic Beach Boardwalk')">
+            <h2>Atlantic Beach Boardwalk</h2>
+            <p>A last ocean view before heading home.</p>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_exit', 'Drive Home After Lunch')">
+            <h2>Drive Home After Lunch</h2>
+            <p>Relaxed departure around 3 PM.</p>
+        </div>
+
+    </div>
+
+    <!-- OPTIONAL DRINKS / TREATS -->
+    <h2 class="page-title" style="margin-top:40px;">Final Treats</h2>
+    <p class="page-subtitle">If you’re leaving a bit later, enjoy one last indulgence.</p>
+
+    <div class="choices-container">
+
+        <div class="choice-card" onclick="saveChoice('day3_drinks', 'Cru Bar')">
+            <h2>Cru Bar</h2>
+            <p>One last cocktail or glass of wine.</p>
+            <a href="https://crubar.com" target="_blank" class="external-link">Visit Website</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_drinks', 'Ice Cream at Beaufort Creamery')">
+            <h2>Beaufort Creamery</h2>
+            <p>A sweet ending to the weekend.</p>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('day3_drinks', 'Head Home After Lunch')">
+            <h2>Head Home After Lunch</h2>
+            <p>Skip drinks and start the drive.</p>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-buttons">
+        <button class="back-btn" onclick="goBack('day2.html')">Back</button>
+        <button class="next-btn" onclick="goNext('internerrary.html')">Next</button>
+    </div>
+
+</body>
+</html>
