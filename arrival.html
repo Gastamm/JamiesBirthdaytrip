@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
+    <!-- Coastal Boutique Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <!-- Arrival-specific overrides -->
     <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(180deg, #f4f7fa 0%, #ffffff 100%);
+        }
+
         .arrival-wrapper {
             max-width: 900px;
             margin: 0 auto;
@@ -17,11 +25,23 @@
         }
 
         .arrival-banner {
-            background: rgba(255,255,255,0.7);
-            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            padding: 25px;
             border-radius: 12px;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .arrival-banner h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .arrival-banner strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
         }
 
         .arrival-links a {
@@ -44,6 +64,8 @@
         }
 
         .arrival-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
             margin-bottom: 10px;
         }
 
@@ -68,15 +90,15 @@
     </style>
 </head>
 
-<body style="background: #f4f7fa;">
+<body>
 
     <div class="arrival-wrapper">
 
         <!-- BANNER -->
         <div class="arrival-banner">
-            <h1 class="page-title">Welcome to Beaufort</h1>
+            <h1>Welcome to Beaufort</h1>
             <p class="page-subtitle">
-                We’re staying at the beautiful <strong>Inlet Inn</strong>, right on the waterfront.
+                You’re staying at the beautiful <strong>Inlet Inn</strong>, right on the waterfront.
                 It’s the perfect home base for your birthday weekend.
             </p>
 
@@ -88,21 +110,17 @@
 
         <!-- VIDEO -->
         <div class="arrival-section">
-            <h2 class="page-title">A Look at the Inlet Inn</h2>
-            <div class="arrival-video">
-                <iframe 
-                    src="https://player.vimeo.com/video/76979871"
-                    width="100%" height="400"
-                    frameborder="0"
-                    allow="autoplay; fullscreen"
-                    allowfullscreen>
-                </iframe>
-            </div>
+            <h2>A Look at the Inlet Inn</h2>
+
+            <video controls style="width:100%; max-width:800px; border-radius:12px; display:block; margin:30px auto;">
+                <source src="https://inlet-inn.com/wp-content/uploads/2023/03/Inlet-Inn-Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
         <!-- ARRIVAL VIBES -->
         <div class="arrival-section">
-            <h2 class="page-title">Arrival Vibes</h2>
+            <h2>Arrival Vibes</h2>
             <p class="page-subtitle">Choose how you want to begin your weekend.</p>
 
             <div class="choices-container">
@@ -130,7 +148,7 @@
 
         <!-- THINGS TO DO -->
         <div class="arrival-section">
-            <h2 class="page-title">Things to Do When You Arrive</h2>
+            <h2>Things to Do When You Arrive</h2>
 
             <div class="arrival-list">
                 <ul>
