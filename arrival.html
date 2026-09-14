@@ -21,15 +21,15 @@
         /* HERO SECTION */
         .hero {
             position: relative;
-            height: 400px; /* UPDATED HEIGHT */
+            height: 400px;
             background: url('images/inlet inn 4.jpg') center center / cover no-repeat;
             display: flex;
-            align-items: center; /* L1 CENTERED */
+            align-items: center;
             justify-content: center;
             text-align: center;
         }
 
-        /* Luxury overlay: bright top, dark bottom */
+        /* Luxury overlay */
         .hero::before {
             content: "";
             position: absolute;
@@ -49,9 +49,9 @@
             animation: fadeInHero 1.2s ease;
         }
 
-        /* Logo fade-in with more pop */
+        /* Logo fade-in */
         .hero-logo {
-            width: 230px; /* slightly larger */
+            width: 230px;
             margin: 0 auto 20px auto;
             display: block;
             animation: fadeInLogo 1.2s ease;
@@ -82,6 +82,14 @@
             font-family: 'Playfair Display', serif;
             color: #1a1a1a;
             text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+        }
+
+        /* DISCLAIMER */
+        .hero-disclaimer {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
         }
 
         /* MAIN CONTENT WRAPPER */
@@ -150,6 +158,9 @@
             <img src="images/Inlet-Inn-logo-white.png" alt="Inlet Inn Logo" class="hero-logo">
             <h1>Welcome to Beaufort</h1>
             <p class="hero-subtitle">You’re staying at the beautiful Inlet Inn</p>
+
+            <!-- FUNNY DISCLAIMER -->
+            <p class="hero-disclaimer">(Trip dates expertly dictated by your schedule and my obsessive planning.)</p>
         </div>
     </div>
 
@@ -227,8 +238,16 @@
         <!-- NAVIGATION -->
         <div class="nav-buttons" style="text-align:center; margin:40px 0;">
             <button class="back-btn" onclick="goBack('index.html')">Back</button>
-            <button class="next-btn" onclick="goNext('dinner.html')">Next</button>
+
+            <!-- UPDATED NEXT LINK -->
+            <button class="next-btn" onclick="goNext('dinner-and-drinks.html')">Next</button>
         </div>
+
+    </div>
+
+</body>
+</html>
+
 
     </div>
 
