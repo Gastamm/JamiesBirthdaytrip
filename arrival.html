@@ -13,6 +13,8 @@
     <h1 class="page-title">Choose Your Arrival Vibe</h1>
     <p class="page-subtitle">How do you want to start your Beaufort weekend?</p>
 
+    <!-- ARRIVAL VIBE SECTION -->
+    <h2 class="page-title" style="margin-top:40px;">Arrival Options</h2>
     <div class="choices-container">
 
         <!-- OPTION 1 -->
@@ -41,11 +43,24 @@
 
     </div>
 
-    <!-- NAVIGATION -->
-    <div class="nav-buttons">
-        <button class="back-btn" onclick="goBack('index.html')">Back</button>
-        <button class="next-btn" onclick="goNext('dinner.html')">Next</button>
-    </div>
+    <!-- DRINKS SECTION -->
+    <h2 class="page-title" style="margin-top:40px;">Arrival Drinks</h2>
+    <p class="page-subtitle">Set the tone for your first night.</p>
 
-</body>
-</html>
+    <div class="choices-container">
+
+        <div class="choice-card" onclick="saveChoice('arrival_drinks', 'Cru Bar')">
+            <h2>Cru Bar</h2>
+            <p>Wine, cocktails, and a cozy vibe right in downtown Beaufort.</p>
+            <a href="https://crubar.com" target="_blank" class="external-link">Visit Cru Bar</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('arrival_drinks', 'Moonrakers Rooftop')">
+            <h2>Moonrakers Rooftop</h2>
+            <p>Drinks with a stunning waterfront view.</p>
+            <a href="https://moonrakersbeaufort.com" target="_blank" class="external-link">Visit Moonrakers</a>
+        </div>
+
+        <div class="choice-card" onclick="saveChoice('arrival_drinks', 'Hang Out at the Hotel')">
+            <h2>Hang Out at the Hotel</h2>
+            <p>Relax, unpack, and ease into the weekend at your
