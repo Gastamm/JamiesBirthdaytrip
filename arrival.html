@@ -21,7 +21,7 @@
         /* HERO SECTION */
         .hero {
             position: relative;
-            height: 500px; /* MEDIUM HEIGHT */
+            height: 400px; /* UPDATED HEIGHT */
             background: url('images/inlet inn 4.jpg') center center / cover no-repeat;
             display: flex;
             align-items: center; /* L1 CENTERED */
@@ -49,21 +49,22 @@
             animation: fadeInHero 1.2s ease;
         }
 
-        /* Logo fade-in */
+        /* Logo fade-in with more pop */
         .hero-logo {
-            width: 200px;
+            width: 230px; /* slightly larger */
             margin: 0 auto 20px auto;
             display: block;
             animation: fadeInLogo 1.2s ease;
+            filter: brightness(1.15) drop-shadow(0 2px 4px rgba(0,0,0,0.35));
         }
 
         @keyframes fadeInLogo {
-            from { opacity: 0; transform: translateY(-12px); }
+            from { opacity: 0; transform: translateY(-16px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeInHero {
-            from { opacity: 0; transform: translateY(18px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
