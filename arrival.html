@@ -10,36 +10,45 @@
     <!-- Coastal Boutique Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- Arrival-specific overrides -->
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background: linear-gradient(180deg, #eef3f7 0%, #ffffff 60%, #fdfdfd 100%);
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
         }
 
-        .arrival-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            animation: fadeIn 0.8s ease;
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 500px; /* MEDIUM HEIGHT */
+            background: url('images/inlet inn 4.jpg') center center / cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
-        /* Banner photo */
-        .arrival-photo-banner {
-            max-width: 900px;
-            margin: 20px auto 40px auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        /* Light overlay for legibility */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(255,255,255,0.85),
+                rgba(255,255,255,0.65)
+            );
         }
 
-        .arrival-photo-banner img {
-            width: 100%;
-            display: block;
+        /* Hero content */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInHero 1.2s ease;
         }
 
         /* Logo fade-in */
-        .arrival-logo {
+        .hero-logo {
             width: 180px;
             margin: 0 auto 20px auto;
             display: block;
@@ -51,19 +60,34 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .arrival-banner {
-            background: rgba(255,255,255,0.85);
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        @keyframes fadeInHero {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .arrival-banner h1 {
+        .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+            font-size: 2.4rem;
+            margin: 10px 0;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* MAIN CONTENT WRAPPER */
+        .arrival-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* LINKS */
+        .arrival-links {
+            text-align: center;
+            margin: 20px 0;
         }
 
         .arrival-links a {
@@ -81,6 +105,7 @@
             border-bottom-color: #003f5f;
         }
 
+        /* SECTION HEADERS */
         .arrival-section {
             margin-top: 50px;
         }
@@ -89,8 +114,10 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             margin-bottom: 10px;
+            text-align: center;
         }
 
+        /* VIDEO */
         .arrival-video {
             margin: 30px auto;
             max-width: 800px;
@@ -98,51 +125,33 @@
             overflow: hidden;
         }
 
+        /* LIST */
         .arrival-list {
             max-width: 800px;
             margin: 20px auto;
             font-size: 1.1rem;
             line-height: 1.7;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
 
 <body>
 
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-content">
+            <img src="images/Inlet-Inn-logo-white.png" alt="Inlet Inn Logo" class="hero-logo">
+            <h1>Welcome to Beaufort</h1>
+            <p class="hero-subtitle">You’re staying at the beautiful Inlet Inn</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
     <div class="arrival-wrapper">
 
-        <!-- PHOTO BANNER -->
-        <div class="arrival-photo-banner">
-            <img src="images/inlet inn 4.jpg" alt="Inlet Inn Sign and Building">
-        </div>
-
-        <!-- LOGO + BANNER -->
-        <div class="arrival-banner">
-
-            <!-- White Logo -->
-            <img src="images/Inlet-Inn-logo-white.png" alt="Inlet Inn Logo" class="arrival-logo">
-
-            <h1>Welcome to Beaufort</h1>
-
-            <p class="page-subtitle">
-                You’re staying at the beautiful
-                <br>
-                <strong style="font-family:'Playfair Display', serif; font-size:1.3rem;">
-                    <img src="images/Inlet-Inn-logo-white.png" 
-                         alt="Inlet Inn Logo"
-                         style="width:140px; margin-top:10px;">
-                </strong>
-            </p>
-
-            <div class="arrival-links">
-                <a href="https://inlet-inn.com" target="_blank">Visit the Inlet Inn Website</a>
-                <a href="https://www.beaufortnc.org" target="_blank">Explore Beaufort’s Official Website</a>
-            </div>
+        <div class="arrival-links">
+            <a href="https://inlet-inn.com" target="_blank">Visit the Inlet Inn Website</a>
+            <a href="https://www.beaufortnc.org" target="_blank">Explore Beaufort’s Official Website</a>
         </div>
 
         <!-- VIDEO -->
@@ -167,7 +176,7 @@
         <!-- ARRIVAL VIBES -->
         <div class="arrival-section">
             <h2>Arrival Vibes</h2>
-            <p class="page-subtitle">Choose how you want to begin your weekend.</p>
+            <p class="page-subtitle" style="text-align:center;">Choose how you want to begin your weekend.</p>
 
             <div class="choices-container">
 
@@ -209,7 +218,7 @@
         </div>
 
         <!-- NAVIGATION -->
-        <div class="nav-buttons">
+        <div class="nav-buttons" style="text-align:center; margin:40px 0;">
             <button class="back-btn" onclick="goBack('index.html')">Back</button>
             <button class="next-btn" onclick="goNext('dinner.html')">Next</button>
         </div>
