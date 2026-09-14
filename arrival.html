@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Arrival Vibe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1 class="page-title">Choose Your Arrival Vibe</h1>
+    <p class="page-subtitle">How do you want to start your Beaufort weekend?</p>
+
+    <div class="choices-container">
+
+        <!-- OPTION 1 -->
+        <div class="choice-card" onclick="saveChoice('arrival', 'Wine on the Porch')">
+            <img src="images/inlet inn 1.jpg" alt="Rocking Chairs Drinking Wine">
+            <h2>Wine on the Porch</h2>
+            <p>A relaxing start with a glass of wine overlooking the marina.</p>
+            <a href="https://www.inletinn.com" target="_blank" class="external-link">Visit Inlet Inn</a>
+        </div>
+
+        <!-- OPTION 2 -->
+        <div class="choice-card" onclick="saveChoice('arrival', 'Quiet Marina View')">
+            <img src="images/inlet inn 2.jpg" alt="Empty Chairs Overlooking Marina">
+            <h2>Quiet Marina View</h2>
+            <p>Settle in with a peaceful view of the boats and water.</p>
+            <a href="https://www.inletinn.com" target="_blank" class="external-link">Visit Inlet Inn</a>
+        </div>
+
+        <!-- OPTION 3 -->
+        <div class="choice-card" onclick="saveChoice('arrival', 'Sunset Stroll')">
+            <img src="images/beaufort 3.jpg" alt="Marina with Car Park">
+            <h2>Sunset Stroll</h2>
+            <p>Take a gentle walk along the waterfront as the sun goes down.</p>
+            <a href="https://www.beaufortnc.org" target="_blank" class="external-link">Explore Beaufort</a>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-buttons">
+        <button class="back-btn" onclick="goBack('index.html')">Back</button>
+        <button class="next-btn" onclick="goNext('dinner.html')">Next</button>
+    </div>
+
+</body>
+</html>
