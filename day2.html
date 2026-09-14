@@ -3,146 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 2 Options</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Day 2 — A Day in Beaufort</title>
+
+    <!-- Boutique Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <script src="script.js"></script>
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* HEADER WITH FAINT MARINA TEXTURE */
+        .day-header {
+            background: url('images/beaufort 1.jpg') center center / cover no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .day-header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(2px);
+        }
+
+        .day-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .day-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            margin: 0;
+            color: #1a1a1a;
+        }
+
+        .day-header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* SECTION HEADERS */
+        .section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section p {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* QUIZ CARD CONTAINER */
+        .choices-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        /* QUIZ CARD */
+        .choice-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .choice-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        /* ROUNDED APP TILE ICON */
+        .app-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            background: #e8f2f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 15px auto;
+            color: #333;
+        }
+
+        .choice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .choice-card p {
+            font-size: 1rem;
+            text-align: center;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        /* INTERNAL LINK */
+        .card-link {
+            display: block;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #005f8f;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .card-link:hover {
+            color: #003f5f;
+        }
+
+        /* EXTERNAL LINK */
+        .external-link {
+            display: block;
+            text-align: center;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #777;
+            text-decoration: none;
+        }
+
+        .external-link:hover {
+            color: #444;
+        }
+
+        /* NAV BUTTONS */
+        .nav-buttons {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .nav-buttons button {
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 10px;
+            background: #005f8f;
+            color: #fff;
+            transition: background 0.2s ease;
+        }
+
+        .nav-buttons button:hover {
+            background: #003f5f;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1 class="page-title">Day 2 — Build Your Perfect Day</h1>
-    <p class="page-subtitle">Choose your breakfast, activities, lunch, exploration, dinner, and drinks.</p>
-
-    <!-- BREAKFAST -->
-    <h2 class="page-title" style="margin-top:40px;">Breakfast</h2>
-    <div class="choices-container">
-
-        <div class="choice-card" onclick="saveChoice('day2_breakfast', 'Beaufort Coffee Shop')">
-            <h2>Beaufort Coffee Shop</h2>
-            <p>Fresh pastries and local-roasted coffee.</p>
-            <a href="https://www.beaufortcoffeeshop.com" target="_blank" class="external-link">Visit Website</a>
+    <!-- HEADER -->
+    <div class="day-header">
+        <div class="day-header-content">
+            <h1>A Day in Beaufort</h1>
+            <p>Your guided choices from morning to night.</p>
         </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_breakfast', 'Cru Bar & Coffee Shop')">
-            <h2>Cru Bar & Coffee Shop</h2>
-            <p>Espresso, pastries, and a cozy morning vibe.</p>
-            <a href="https://www.crubar.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_breakfast', 'Aqua Bakery')">
-            <h2>Aqua Bakery</h2>
-            <p>Fresh baked goods and light breakfast plates.</p>
-            <a href="https://aquabeaufort.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
     </div>
 
-    <!-- MORNING ACTIVITIES -->
-    <h2 class="page-title" style="margin-top:40px;">Morning Activities</h2>
-    <div class="choices-container">
+    <!-- MORNING SECTION -->
+    <div class="section">
+        <h2>Morning — Start Your Day</h2>
+        <p>Choose how you'd like to begin your morning in Beaufort.</p>
 
-        <div class="choice-card" onclick="saveChoice('day2_morning', 'Walk the Waterfront')">
-            <h2>Walk the Waterfront</h2>
-            <p>Relaxing stroll with beautiful views.</p>
+        <div class="choices-container">
+
+            <!-- Coffee at Cru -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Coffee at Cru')">
+                <div class="app-icon">☕</div>
+                <h3>Coffee at Cru</h3>
+                <p>Start your morning with a local brew.</p>
+                <a class="card-link" href="https://cruwinebar.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://cruwinebar.com" target="_blank">Visit Cru Coffee Shop →</a>
+
+            <!-- Beaufort Coffee Shop -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Beaufort Coffee Shop')">
+                <div class="app-icon">🥐</div>
+                <h3>Beaufort Coffee Shop</h3>
+                <p>Grab a pastry and enjoy the morning light.</p>
+                <a class="card-link" href="https://www.beaufortcoffeeshop.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://www.beaufortcoffeeshop.com" target="_blank">Visit Beaufort Coffee Shop →</a>
+
+            <!-- Waterfront Walk -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Waterfront Walk')">
+                <div class="app-icon">🚶</div>
+                <h3>Waterfront Walk</h3>
+                <p>Take in the peaceful morning waterfront.</p>
+                <a class="card-link" href="https://www.beaufortnc.org/waterfront" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://www.beaufortnc.org/waterfront" target="_blank">Explore the Waterfront →</a>
+
         </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_morning', 'Visit Maritime Museum')">
-            <h2>NC Maritime Museum</h2>
-            <p>Explore Beaufort’s coastal history.</p>
-            <a href="https://www.ncmaritimemuseumbeaufort.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_morning', 'Ferry to Shackleford Banks')">
-            <h2>Shackleford Banks Ferry</h2>
-            <p>See wild horses and pristine beaches.</p>
-            <a href="https://islandferryadventures.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
     </div>
 
-    <!-- LUNCH -->
-    <h2 class="page-title" style="margin-top:40px;">Lunch</h2>
-    <div class="choices-container">
+    <!-- LATE MORNING SECTION -->
+    <div class="section">
+        <h2>Late Morning — Explore Beaufort</h2>
+        <p>Pick your late-morning adventure.</p>
 
-        <div class="choice-card" onclick="saveChoice('day2_lunch', 'Finz Grill')">
-            <h2>Finz Grill</h2>
-            <p>Casual marina-side lunch.</p>
-            <a href="https://finzbeaufort.com" target="_blank" class="external-link">Visit Website</a>
+        <div class="choices-container">
+
+            <!-- Maritime Museum -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Maritime Museum')">
+                <div class="app-icon">🏛️</div>
+                <h3>NC Maritime Museum</h3>
+                <p>Discover Beaufort’s maritime history.</p>
+                <a class="card-link" href="https://www.ncmaritimemuseumbeaufort.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://www.ncmaritimemuseumbeaufort.com" target="_blank">Visit the Maritime Museum →</a>
+
+            <!-- Front Street Shops -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Front Street Shops')">
+                <div class="app-icon">🛍️</div>
+                <h3>Front Street Shops</h3>
+                <p>Browse boutiques and coastal goods.</p>
+                <a class="card-link" href="https://www.beaufortnc.org/shopping" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://www.beaufortnc.org/shopping" target="_blank">Explore Front Street Shops →</a>
+
+            <!-- Boardwalk -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Boardwalk')">
+                <div class="app-icon">🌊</div>
+                <h3>Boardwalk & Marina</h3>
+                <p>Enjoy the waterfront views.</p>
+                <a class="card-link" href="https://www.beaufortnc.org/waterfront" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://www.beaufortnc.org/waterfront" target="_blank">Visit the Boardwalk →</a>
+
         </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_lunch', 'Black Sheep')">
-            <h2>Black Sheep</h2>
-            <p>Waterfront pizza and salads.</p>
-            <a href="https://blacksheepbeaufort.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_lunch', 'Clawson’s 1905')">
-            <h2>Clawson’s 1905</h2>
-            <p>Classic Beaufort lunch spot.</p>
-            <a href="https://clawsons1905.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
     </div>
 
-    <!-- AFTERNOON ACTIVITIES -->
-    <h2 class="page-title" style="margin-top:40px;">Afternoon Exploration</h2>
-    <div class="choices-container">
+    <!-- LUNCH SECTION -->
+    <div class="section">
+        <h2>Lunch — Choose Your Spot</h2>
+        <p>Pick your lunch destination.</p>
 
-        <div class="choice-card" onclick="saveChoice('day2_afternoon', 'Explore Beaufort Historic District')">
-            <h2>Historic District</h2>
-            <p>Charming streets and historic homes.</p>
+        <div class="choices-container">
+
+            <!-- Moonrakers -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Moonrakers')">
+                <div class="app-icon">🍽️</div>
+                <h3>Moonrakers</h3>
+                <p>Waterfront dining with rooftop views.</p>
+                <a class="card-link" href="https://moonrakersbeaufort.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://moonrakersbeaufort.com" target="_blank">Visit Moonrakers →</a>
+
+            <!-- Front Street Grill -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Front Street Grill')">
+                <div class="app-icon">🍤</div>
+                <h3>Front Street Grill</h3>
+                <p>Seafood and waterfront views.</p>
+                <a class="card-link" href="https://frontstreetgrill.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://frontstreetgrill.com" target="_blank">Visit Front Street Grill →</a>
+
+            <!-- Black Sheep -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Black Sheep')">
+                <div class="app-icon">🥪</div>
+                <h3>Black Sheep</h3>
+                <p>Casual lunch with great sandwiches.</p>
+                <a class="card-link" href="https://blacksheepbeaufort.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://blacksheepbeaufort.com" target="_blank">Visit Black Sheep →</a>
+
         </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_afternoon', 'Kayak or Paddleboard')">
-            <h2>Kayak / Paddleboard</h2>
-            <p>Get out on the water for some fun.</p>
-            <a href="https://beaufortpaddle.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_afternoon', 'Drive to Atlantic Beach')">
-            <h2>Atlantic Beach</h2>
-            <p>Quick drive for ocean views and sand.</p>
-        </div>
-
     </div>
 
-    <!-- DINNER 2 -->
-    <h2 class="page-title" style="margin-top:40px;">Dinner</h2>
-    <div class="choices-container">
+    <!-- AFTERNOON SECTION -->
+    <div class="section">
+        <h2>Afternoon — Adventure or Relaxation</h2>
+        <p>Choose how you want to spend your afternoon.</p>
 
-        <div class="choice-card" onclick="saveChoice('day2_dinner', 'Moonrakers')">
-            <h2>Moonrakers</h2>
-            <p>Waterfront dining.</p>
-            <a href="https://moonrakersbeaufort.com" target="_blank" class="external-link">Visit Website</a>
+        <div class="choices-container">
+
+            <!-- Kayaking -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Kayaking')">
+                <div class="app-icon">🛶</div>
+                <h3>Kayaking</h3>
+                <p>Paddle through Beaufort’s calm waters.</p>
+                <a class="card-link" href="https://beaufortpaddle.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://beaufortpaddle.com" target="_blank">Kayak with Beaufort Paddle →</a>
+
+            <!-- Nature Walk -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Nature Walk')">
+                <div class="app-icon">🌿</div>
+                <h3>Nature Walk</h3>
+                <p>Explore the coastal environment.</p>
+                <a class="card-link" href="https://www.nps.gov/calo/index.htm" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://www.nps.gov/calo/index.htm" target="_blank">Visit Cape Lookout →</a>
+
+            <!-- Relax -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Relax at the Inn')">
+                <div class="app-icon">🪑</div>
+                <h3>Relax at the Inn</h3>
+                <p>Enjoy a quiet afternoon on the porch.</p>
+                <a class="card-link" href="https://inlet-inn.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://inlet-inn.com" target="_blank">Visit the Inlet Inn →</a>
+
         </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_dinner', 'Aqua Restaurant')">
-            <h2>Aqua Restaurant</h2>
-            <p>Tapas and wine.</p>
-            <a href="https://aquabeaufort.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
-        <div class="choice-card" onclick="saveChoice('day2_dinner', 'Front Street Grill')">
-            <h2>Front Street Grill</h2>
-            <p>Classic waterfront dinner.</p>
-            <a href="https://frontstreetgrill.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
-
     </div>
 
-    <!-- DRINKS -->
-    <h2 class="page-title" style="margin-top:40px;">Drinks</h2>
-    <div class="choices-container">
+    <!-- EVENING SECTION -->
+    <div class="section">
+        <h2>Evening — Dinner & Drinks</h2>
+        <p>Choose how you'd like to end your day.</p>
 
-        <div class="choice-card" onclick="saveChoice('day2_drinks', 'Cru Bar')">
-            <h2>Cru Bar</h2>
-            <p>Wine, cocktails, and a cozy vibe.</p>
-            <a href="https://crubar.com" target="_blank" class="external-link">Visit Website</a>
-        </div>
+        <div class="choices-container">
 
-        <div class="choice-card" onclick="saveChoice('day2_drinks', 'Moonrakers Rooftop')">
-            <h2>Moonrakers Rooftop</h2>
-            <p>Drinks with a view.</p>
-            <a href="https://moonrakersbeaufort.com" target="_blank" class="external-link">Visit Website</a>
+            <!-- Dinner -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Dinner')">
+                <div class="app-icon">🍝</div>
+                <h3>Dinner</h3>
+                <p>Enjoy a relaxing waterfront meal.</p>
+                <a class="card-link" href="https://moonrakersbeaufort.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://moonrakersbeaufort.com" target="_blank">Dinner at Moonrakers →</a>
+
+            <!-- Cocktails -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Cocktails')">
+                <div class="app-icon">🍸</div>
+                <h3>Cocktails</h3>
+                <p>Craft cocktails to end the night.</p>
+                <a class="card-link" href="https://aquarestaurant.com" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://aquarestaurant.com" target="_blank">Visit Aqua Restaurant →</a>
+
+            <!-- Sunset -->
+            <div class="choice-card" onclick="saveChoice('day2', 'Sunset Stroll')">
+                <div class="app-icon">🌅</div>
+                <h3>Sunset Stroll</h3>
+                <p>Walk the waterfront at golden hour.</p>
+                <a class="card-link" href="https://www.beaufortnc.org/waterfront" target="_blank">Learn More</a>
+            </div>
+            <a class="external-link" href="https://www.beaufortnc.org/waterfront" target="_blank">Sunset on the Waterfront →</a>
+
         </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-buttons">
+        <button onclick="goBack('arrival.html')">Back</button>
+        <button onclick="goNext('day3.html')">Next</button>
+    </div>
+
+</body>
+</html>
+
 
