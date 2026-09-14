@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Beaufort Weekend Itinerary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <style>
+        .itinerary-section {
+            margin: 30px auto;
+            max-width: 800px;
+            background: #ffffffd9;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .itinerary-section h2 {
+            margin-bottom: 10px;
+        }
+        .itinerary-item {
+            margin: 6px 0;
+            font-size: 1.1rem;
+        }
+        .print-btn {
+            background-color: #444;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
+        .print-btn:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+
+<body onload="generateItinerary()">
+
+    <h1 class="page-title">Your Beaufort Weekend Itinerary</h1>
+    <p class="page-subtitle">A curated summary of your birthday adventure.</p>
+
+    <!-- ARRIVAL -->
+    <div class="itinerary-section">
+        <h2>Arrival</h2>
+        <div class="itinerary-item"><strong>Arrival Vibe:</strong> <span id="arrival-choice"></span></div>
+        <div class="itinerary-item"><strong>Arrival Drinks:</strong> <span id="arrival_drinks-choice"></span></div>
+    </div>
+
+    <!-- DINNER DAY 1 -->
+    <div class="itinerary-section">
+        <h2>Birthday Dinner (Day 1)</h2>
+        <div class="itinerary-item"><strong>Dinner:</strong> <span id="dinner-choice"></span></div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="itinerary-section">
+        <h2>Day 2</h2>
+        <div class="itinerary-item"><strong>Breakfast:</strong> <span id="day2_breakfast-choice"></span></div>
+        <div class="itinerary-item"><strong>Morning Activity:</strong> <span id="day2_morning-choice"></span></div>
+        <div class="itinerary-item"><strong>Lunch:</strong> <span id="day2_lunch-choice"></span></div>
+        <div class="itinerary-item"><strong>Afternoon Exploration:</strong> <span id="day2_afternoon-choice"></span></div>
+        <div class="itinerary-item"><strong>Dinner:</strong> <span id="day2_dinner-choice"></span></div>
+        <div class="itinerary-item"><strong>Drinks:</strong> <span id="day2_drinks-choice"></span></div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="itinerary-section">
+        <h2>Day 3</h2>
+        <div class="itinerary-item"><strong>Breakfast:</strong> <span id="day3_breakfast-choice"></span></div>
+        <div class="itinerary-item"><strong>Checkout:</strong> <span id="day3_checkout-choice"></span></div>
+        <div class="itinerary-item"><strong>Late Morning Activity:</strong> <span id="day3_morning-choice"></span></div>
+        <div class="itinerary-item"><strong>Lunch:</strong> <span id="day3_lunch-choice"></span></div>
+        <div class="itinerary-item"><strong>On the Way Home:</strong> <span id="day3_exit-choice"></span></div>
+        <div class="itinerary-item"><strong>Final Treat:</strong> <span id="day3_drinks-choice"></span></div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="nav-buttons" style="margin-top:40px;">
+        <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+        <button class="next-btn" onclick="restart()">Restart Trip</button>
+    </div>
+
+    <script>
+        function generateItinerary() {
+            const fields = [
+                'arrival', 'arrival_drinks', 'dinner',
+                'day2_breakfast', 'day2_morning', 'day2_lunch', 'day2_afternoon', 'day2_dinner', 'day2_drinks',
+                'day3_breakfast', 'day3_checkout', 'day3_morning', 'day3_lunch', 'day3_exit', 'day3_drinks'
+            ];
+
+            fields.forEach(key => {
+                const value = localStorage.getItem(key) || 'Not selected';
+                const element = document.getElementById(`${key}-choice`);
+                if (element) element.innerText = value;
+            });
+        }
+    </script>
+
+</body>
+</html>
