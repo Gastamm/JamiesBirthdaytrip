@@ -85,27 +85,25 @@
             -webkit-text-stroke: 0.4px rgba(0,0,0,0.25);
         }
 
-        /* Hero subtitle with soft glow */
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-top: 10px;
-            font-family: 'Playfair Display', serif;
-            color: #111;
-            text-shadow:
-                0 0 6px rgba(255,255,255,0.9),
-                0 0 12px rgba(255,255,255,0.6),
-                0 1px 4px rgba(0,0,0,0.25);
-            -webkit-text-stroke: 0.4px rgba(0,0,0,0.25);
+        /* SUBTITLE + DISCLAIMER BELOW HERO */
+        .below-hero {
+            max-width: 900px;
+            margin: 25px auto 0 auto;
+            text-align: center;
+            padding: 0 20px;
         }
 
-        /* DISCLAIMER BELOW HERO */
-        .hero-disclaimer {
-            text-align: center;
+        .below-hero .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .below-hero .disclaimer {
             font-size: 1rem;
-            color: #333;
+            color: #444;
             font-style: italic;
-            margin: 20px auto 0 auto;
-            max-width: 900px;
         }
 
         /* MAIN CONTENT WRAPPER */
@@ -173,12 +171,14 @@
         <div class="hero-content">
             <img src="images/Inlet-Inn-logo-white.png" alt="Inlet Inn Logo" class="hero-logo">
             <h1>Welcome to Beaufort</h1>
-            <p class="hero-subtitle">You’re staying at the beautiful Inlet Inn</p>
         </div>
     </div>
 
-    <!-- DISCLAIMER BELOW HERO -->
-    <p class="hero-disclaimer">(Trip dates expertly dictated by your schedule and my obsessive planning.)</p>
+    <!-- SUBTITLE + DISCLAIMER BELOW HERO -->
+    <div class="below-hero">
+        <p class="subtitle">You’re staying at the beautiful Inlet Inn</p>
+        <p class="disclaimer">(Trip dates expertly dictated by your schedule and my obsessive planning.)</p>
+    </div>
 
     <!-- MAIN CONTENT -->
     <div class="arrival-wrapper">
