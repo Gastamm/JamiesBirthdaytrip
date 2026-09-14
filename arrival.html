@@ -6,85 +6,150 @@
     <title>Your Arrival Experience</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <!-- Arrival-specific overrides -->
+    <style>
+        .arrival-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .arrival-banner {
+            background: rgba(255,255,255,0.7);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .arrival-links a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 1.1rem;
+            color: #005f8f;
+            text-decoration: none;
+            border-bottom: 1px solid #005f8f;
+            padding-bottom: 3px;
+        }
+
+        .arrival-links a:hover {
+            color: #003f5f;
+            border-bottom-color: #003f5f;
+        }
+
+        .arrival-section {
+            margin-top: 50px;
+        }
+
+        .arrival-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .arrival-video {
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .arrival-list {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 
-<body>
+<body style="background: #f4f7fa;">
 
-    <!-- INTRO -->
-    <h1 class="page-title">Welcome to Beaufort</h1>
-    <p class="page-subtitle">
-        We’re staying at the beautiful <strong>Inlet Inn</strong>, right on the waterfront.
-        It’s the perfect home base for your birthday weekend.
-    </p>
+    <div class="arrival-wrapper">
 
-    <div style="text-align:center; margin-top:20px;">
-        <a href="https://www.inletinn.com" target="_blank" class="external-link">
-            Visit the Inlet Inn Website
-        </a>
-        <br><br>
-        <a href="https://www.beaufortnc.org" target="_blank" class="external-link">
-            Explore Beaufort’s Official Website
-        </a>
-    </div>
+        <!-- BANNER -->
+        <div class="arrival-banner">
+            <h1 class="page-title">Welcome to Beaufort</h1>
+            <p class="page-subtitle">
+                We’re staying at the beautiful <strong>Inlet Inn</strong>, right on the waterfront.
+                It’s the perfect home base for your birthday weekend.
+            </p>
 
-    <!-- VIDEO -->
-    <div style="max-width:800px; margin:50px auto;">
-        <h2 class="page-title">A Look at the Inlet Inn</h2>
-        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
-            <iframe 
-                src="https://player.vimeo.com/video/76979871" 
-                style="position:absolute; top:0; left:0; width:100%; height:100%;" 
-                frameborder="0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    <!-- ARRIVAL VIBES -->
-    <h2 class="page-title" style="margin-top:50px;">Arrival Vibes</h2>
-    <p class="page-subtitle">Choose how you want to begin your weekend.</p>
-
-    <div class="choices-container">
-
-        <div class="choice-card" onclick="saveChoice('arrival', 'Wine on the Porch')">
-            <img src="images/inlet inn 1.jpg" alt="Rocking Chairs Drinking Wine">
-            <h2>Wine on the Porch</h2>
-            <p>Ease into the weekend with a quiet moment overlooking the marina.</p>
+            <div class="arrival-links">
+                <a href="https://www.inletinn.com" target="_blank">Visit the Inlet Inn Website</a>
+                <a href="https://www.beaufortnc.org" target="_blank">Explore Beaufort’s Official Website</a>
+            </div>
         </div>
 
-        <div class="choice-card" onclick="saveChoice('arrival', 'Quiet Marina View')">
-            <img src="images/inlet inn 2.jpg" alt="Empty Chairs Overlooking Marina">
-            <h2>Quiet Marina View</h2>
-            <p>Take in the peaceful waterfront from the comfort of the porch.</p>
+        <!-- VIDEO -->
+        <div class="arrival-section">
+            <h2 class="page-title">A Look at the Inlet Inn</h2>
+            <div class="arrival-video">
+                <iframe 
+                    src="https://player.vimeo.com/video/76979871"
+                    width="100%" height="400"
+                    frameborder="0"
+                    allow="autoplay; fullscreen"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
-        <div class="choice-card" onclick="saveChoice('arrival', 'Sunset Stroll')">
-            <img src="images/beaufort 3.jpg" alt="Marina with Car Park">
-            <h2>Sunset Stroll</h2>
-            <p>Walk the waterfront and explore the nearby shops and boardwalk.</p>
+        <!-- ARRIVAL VIBES -->
+        <div class="arrival-section">
+            <h2 class="page-title">Arrival Vibes</h2>
+            <p class="page-subtitle">Choose how you want to begin your weekend.</p>
+
+            <div class="choices-container">
+
+                <div class="choice-card" onclick="saveChoice('arrival', 'Wine on the Porch')">
+                    <img src="images/inlet inn 1.jpg" alt="Rocking Chairs Drinking Wine">
+                    <h2>Wine on the Porch</h2>
+                    <p>Ease into the weekend with a quiet moment overlooking the marina.</p>
+                </div>
+
+                <div class="choice-card" onclick="saveChoice('arrival', 'Quiet Marina View')">
+                    <img src="images/inlet inn 2.jpg" alt="Empty Chairs Overlooking Marina">
+                    <h2>Quiet Marina View</h2>
+                    <p>Take in the peaceful waterfront from the comfort of the porch.</p>
+                </div>
+
+                <div class="choice-card" onclick="saveChoice('arrival', 'Sunset Stroll')">
+                    <img src="images/beaufort 3.jpg" alt="Marina with Car Park">
+                    <h2>Sunset Stroll</h2>
+                    <p>Walk the waterfront and explore the nearby shops and boardwalk.</p>
+                </div>
+
+            </div>
         </div>
 
-    </div>
+        <!-- THINGS TO DO -->
+        <div class="arrival-section">
+            <h2 class="page-title">Things to Do When You Arrive</h2>
 
-    <!-- THINGS TO DO -->
-    <h2 class="page-title" style="margin-top:50px;">Things to Do When You Arrive</h2>
+            <div class="arrival-list">
+                <ul>
+                    <li>Walk along the Beaufort waterfront</li>
+                    <li>Browse Front Street shops and boutiques</li>
+                    <li>Visit the NC Maritime Museum</li>
+                    <li>Check out the boardwalk and marina</li>
+                    <li>Grab a quick coffee at Cru or Beaufort Coffee Shop</li>
+                    <li>Relax in the waterfront park</li>
+                </ul>
+            </div>
+        </div>
 
-    <div style="max-width:800px; margin:20px auto; font-size:1.1rem; line-height:1.7;">
-        <ul>
-            <li>Walk along the Beaufort waterfront</li>
-            <li>Browse Front Street shops and boutiques</li>
-            <li>Visit the NC Maritime Museum</li>
-            <li>Check out the boardwalk and marina</li>
-            <li>Grab a quick coffee at Cru or Beaufort Coffee Shop</li>
-            <li>Relax in the waterfront park</li>
-        </ul>
-    </div>
+        <!-- NAVIGATION -->
+        <div class="nav-buttons">
+            <button class="back-btn" onclick="goBack('index.html')">Back</button>
+            <button class="next-btn" onclick="goNext('dinner.html')">Next</button>
+        </div>
 
-    <!-- NAVIGATION -->
-    <div class="nav-buttons">
-        <button class="back-btn" onclick="goBack('index.html')">Back</button>
-        <button class="next-btn" onclick="goNext('dinner.html')">Next</button>
     </div>
 
 </body>
