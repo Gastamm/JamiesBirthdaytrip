@@ -14,7 +14,7 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background: linear-gradient(180deg, #f4f7fa 0%, #ffffff 100%);
+            background: linear-gradient(180deg, #eef3f7 0%, #ffffff 60%, #fdfdfd 100%);
         }
 
         .arrival-wrapper {
@@ -22,6 +22,33 @@
             margin: 0 auto;
             padding: 20px;
             animation: fadeIn 0.8s ease;
+        }
+
+        /* Banner photo */
+        .arrival-photo-banner {
+            max-width: 900px;
+            margin: 20px auto 40px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .arrival-photo-banner img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Logo fade-in */
+        .arrival-logo {
+            width: 180px;
+            margin: 0 auto 20px auto;
+            display: block;
+            animation: fadeInLogo 1.2s ease;
+        }
+
+        @keyframes fadeInLogo {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .arrival-banner {
@@ -37,11 +64,6 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
             margin-bottom: 10px;
-        }
-
-        .arrival-banner strong {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
         }
 
         .arrival-links a {
@@ -94,12 +116,27 @@
 
     <div class="arrival-wrapper">
 
-        <!-- BANNER -->
+        <!-- PHOTO BANNER -->
+        <div class="arrival-photo-banner">
+            <img src="images/inlet inn 4.jpg" alt="Inlet Inn Sign and Building">
+        </div>
+
+        <!-- LOGO + BANNER -->
         <div class="arrival-banner">
+
+            <!-- White Logo -->
+            <img src="images/Inlet-Inn-logo-white.png" alt="Inlet Inn Logo" class="arrival-logo">
+
             <h1>Welcome to Beaufort</h1>
+
             <p class="page-subtitle">
-                You’re staying at the beautiful <strong>Inlet Inn</strong>, right on the waterfront.
-                It’s the perfect home base for your birthday weekend.
+                You’re staying at the beautiful
+                <br>
+                <strong style="font-family:'Playfair Display', serif; font-size:1.3rem;">
+                    <img src="images/Inlet-Inn-logo-white.png" 
+                         alt="Inlet Inn Logo"
+                         style="width:140px; margin-top:10px;">
+                </strong>
             </p>
 
             <div class="arrival-links">
