@@ -165,7 +165,7 @@
     <h1>Day 2 – Beaufort Adventure</h1>
     <p class="page-subtitle">Coffee, coastal wandering, and a peek at your future waterfront dream.</p>
 
-    <div id="error-message">Please choose a Morning option, a Late Morning option, and an Afternoon option before continuing.</div>
+    <div id="error-message">Please choose a Morning option, a Late Morning option, an Afternoon option, and an Evening Dinner & Drinks option before continuing.</div>
 
     <!-- MORNING – COFFEE & PASTRIES -->
     <section class="section" id="morning-section">
@@ -173,45 +173,49 @@
         <p class="section-intro">Start your day with something delicious, all within a short walk from the Inlet Inn.</p>
 
         <div class="choices-container">
+
             <div class="choice-card" data-section="morning" data-choice="Cru Coffee Shop">
                 <h3>Cru Coffee Shop</h3>
                 <p>Pastries + coffee in a cozy local spot.</p>
                 <p class="meta-line"><span>🚶 2 min walk</span></p>
+                <a class="card-link" href="https://www.facebook.com/CruCoffeeBar/" target="_blank" onclick="event.stopPropagation()">More Info</a>
             </div>
 
             <div class="choice-card" data-section="morning" data-choice="Beaufort Coffee Shop">
                 <h3>Beaufort Coffee Shop</h3>
                 <p>Espresso and pastries on a short stroll down Front Street.</p>
                 <p class="meta-line"><span>🚶 5 min walk</span></p>
+                <a class="card-link" href="https://www.beaufortcoffeeshop.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
             </div>
 
             <div class="choice-card" data-section="morning" data-choice="Turner Street Market">
                 <h3>Turner Street Market</h3>
                 <p>Baked goods and grab‑and‑go treats.</p>
                 <p class="meta-line"><span>🚶 7 min walk</span></p>
+                <a class="card-link" href="https://www.facebook.com/turnerstreetmarket/" target="_blank" onclick="event.stopPropagation()">More Info</a>
             </div>
 
             <div class="choice-card" data-section="morning" data-choice="The Bakehouse">
                 <h3>The Bakehouse</h3>
                 <p>Pastries and breakfast sandwiches in a quiet little spot.</p>
                 <p class="meta-line"><span>🚶 6 min walk</span></p>
+                <a class="card-link" href="https://www.facebook.com/thebakehousebeaufort/" target="_blank" onclick="event.stopPropagation()">More Info</a>
             </div>
 
             <div class="choice-card" data-section="morning" data-choice="Spouter Inn Bakery">
                 <h3>Spouter Inn Bakery</h3>
                 <p>Waterfront pastries with a scenic walk.</p>
                 <p class="meta-line"><span>🚶 4 min walk</span></p>
+                <a class="card-link" href="https://www.spouterinn.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
             </div>
 
             <div class="choice-card" data-section="morning" data-choice="Breakfast Delivered to the Room">
                 <h3>Breakfast Delivered to the Room</h3>
                 <p>Cozy, slow morning with breakfast brought to you.</p>
                 <p class="meta-line"><span>🚶 0 min walk</span></p>
-                <a class="card-link"
-                   href="https://inlet-inn.com/features-amenities/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">View Inlet Inn Amenities</a>
+                <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">View Inlet Inn Amenities</a>
             </div>
+
         </div>
     </section>
 
@@ -257,6 +261,7 @@
         <p class="section-intro">Take a scenic drive to peek at your future waterfront dream, or explore coastal areas.</p>
 
         <div class="choices-container">
+
             <div class="choice-card" data-section="afternoon" data-choice="Merrimon Bay – 257 Garbacon Dr">
                 <h3>257 Garbacon Dr LOT 106 – Merrimon Bay</h3>
                 <p>Private white‑sand beach with Neuse River frontage and dock potential.</p>
@@ -286,6 +291,7 @@
                     Newport → Nine Mile Road → Bogue Sound edges • Pelletier Creek pockets
                 </p>
             </div>
+
         </div>
     </section>
 
@@ -298,17 +304,37 @@
         </div>
     </section>
 
-    <!-- EVENING – DINNER & DRINKS -->
-    <section class="section">
-        <h2>Evening – Dinner & Drinks</h2>
-        <div class="simple-text-block">
-            <p>Choose one of Beaufort’s waterfront favorites:</p>
-            <p>
-                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank">Moonrakers</a> •
-                <a class="card-link" href="https://aquabeaufort.com/" target="_blank">Aqua</a> •
-                <a class="card-link" href="https://citykitchenbeaufort.com/" target="_blank">City Kitchen</a> •
-                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank">Front Street Grill</a>
-            </p>
+    <!-- EVENING – DINNER & DRINKS (CHOICE REQUIRED) -->
+    <section class="section" id="evening-section">
+        <h2>Evening – Dinner & Drinks (Choose One)</h2>
+        <p class="section-intro">Pick your perfect waterfront dinner spot.</p>
+
+        <div class="choices-container">
+
+            <div class="choice-card" data-section="evening" data-choice="Moonrakers">
+                <h3>Moonrakers</h3>
+                <p>Rooftop seating, waterfront views, upscale coastal cuisine.</p>
+                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+            </div>
+
+            <div class="choice-card" data-section="evening" data-choice="Aqua">
+                <h3>Aqua</h3>
+                <p>Craft cocktails, fresh seafood, intimate atmosphere.</p>
+                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+            </div>
+
+            <div class="choice-card" data-section="evening" data-choice="City Kitchen">
+                <h3>City Kitchen</h3>
+                <p>Soundfront dining with sunset views and modern coastal dishes.</p>
+                <a class="card-link" href="https://citykitchenbeaufort.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+            </div>
+
+            <div class="choice-card" data-section="evening" data-choice="Front Street Grill">
+                <h3>Front Street Grill</h3>
+                <p>Classic Beaufort waterfront dining with a lively atmosphere.</p>
+                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+            </div>
+
         </div>
     </section>
 
@@ -344,8 +370,9 @@
         const morning = localStorage.getItem('day2-morning');
         const lateMorning = localStorage.getItem('day2-late-morning');
         const afternoon = localStorage.getItem('day2-afternoon');
+        const evening = localStorage.getItem('day2-evening');
 
-        if (!morning || !lateMorning || !afternoon) {
+        if (!morning || !lateMorning || !afternoon || !evening) {
             const error = document.getElementById('error-message');
             error.style.display = 'block';
 
@@ -353,8 +380,10 @@
                 document.getElementById('morning-section').scrollIntoView({ behavior: 'smooth' });
             } else if (!lateMorning) {
                 document.getElementById('late-morning-section').scrollIntoView({ behavior: 'smooth' });
-            } else {
+            } else if (!afternoon) {
                 document.getElementById('afternoon-section').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                document.getElementById('evening-section').scrollIntoView({ behavior: 'smooth' });
             }
             return;
         }
