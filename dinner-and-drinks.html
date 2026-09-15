@@ -141,12 +141,15 @@
 
 <div class="page-wrapper">
     <h1>Dinner & Drinks</h1>
-    <p class="page-subtitle">Choose your perfect waterfront dining experience.</p>
+    <p class="page-subtitle">Pick your perfect Beaufort evening.</p>
 
-    <div id="error-message">Please choose a Dinner & Drinks option before continuing.</div>
+    <div id="error-message">
+        Please choose both a <strong>Dinner</strong> option and a <strong>Drinks</strong> option before continuing.
+    </div>
 
-    <section class="section">
-        <h2>Choose One</h2>
+    <!-- DINNER SECTION -->
+    <section class="section" id="dinner-section">
+        <h2>Dinner – Choose One</h2>
 
         <div class="choices-container">
 
@@ -158,7 +161,7 @@
 
             <div class="choice-card" data-section="dinner" data-choice="Aqua">
                 <h3>🍸 Aqua Restaurant</h3>
-                <p>Small plates, craft cocktails, and an intimate ambiance perfect for a relaxing evening.</p>
+                <p>Small plates, craft cocktails, and an intimate ambiance.</p>
                 <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
@@ -177,6 +180,39 @@
             <div class="choice-card" data-section="dinner" data-choice="Black Sheep">
                 <h3>🍕 Black Sheep</h3>
                 <p>Casual dining with excellent sandwiches, pizza, and a lively local vibe.</p>
+                <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DRINKS SECTION -->
+    <section class="section" id="drinks-section">
+        <h2>Drinks – Choose One</h2>
+
+        <div class="choices-container">
+
+            <div class="choice-card" data-section="drinks" data-choice="Aqua Bar">
+                <h3>🍸 Aqua Bar</h3>
+                <p>Craft cocktails, wine, and a cozy bar atmosphere.</p>
+                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Moonrakers Rooftop">
+                <h3>🍹 Moonrakers Rooftop</h3>
+                <p>Drinks on the rooftop with waterfront views.</p>
+                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Front Street Grill Bar">
+                <h3>🍺 Front Street Grill Bar</h3>
+                <p>Casual bar with beer, cocktails, and dockside atmosphere.</p>
+                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Black Sheep Drinks">
+                <h3>🍷 Black Sheep Drinks</h3>
+                <p>Relaxed spot for drinks with pizza and sandwiches.</p>
                 <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
@@ -204,17 +240,24 @@
 
             this.classList.add('selected');
 
-            localStorage.setItem(`dinner-${section}`, choice);
+            localStorage.setItem(`dinner-and-drinks-${section}`, choice);
             document.getElementById('error-message').style.display = 'none';
         });
     });
 
     function validateAndNext() {
-        const dinner = localStorage.getItem('dinner-dinner');
+        const dinner = localStorage.getItem('dinner-and-drinks-dinner');
+        const drinks = localStorage.getItem('dinner-and-drinks-drinks');
 
-        if (!dinner) {
+        if (!dinner || !drinks) {
             const error = document.getElementById('error-message');
             error.style.display = 'block';
+
+            if (!dinner) {
+                document.getElementById('dinner-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (!drinks) {
+                document.getElementById('drinks-section').scrollIntoView({ behavior: 'smooth' });
+            }
             return;
         }
 
@@ -228,4 +271,3 @@
 
 </body>
 </html>
-
