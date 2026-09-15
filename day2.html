@@ -1,354 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Day 2 – Beaufort Adventure</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- EVENING DRINKS – CHOOSE ONE -->
+<section class="section" id="drinks-section">
+    <h2>Evening Drinks – Choose One</h2>
+    <p class="section-intro">Finish the night with the perfect drink experience.</p>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <div class="choices-container">
 
-    <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            margin: 0;
-            background: #ffffff;
-        }
-
-        .page-wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 2.4rem;
-            margin-bottom: 10px;
-        }
-
-        .page-subtitle {
-            text-align: center;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .section {
-            margin: 40px 0;
-        }
-
-        .section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .section p.section-intro {
-            text-align: center;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .choices-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .choice-card {
-            border-radius: 12px;
-            border: 1px solid #ddd;
-            padding: 18px 20px;
-            background: #fafafa;
-            cursor: pointer;
-            transition: box-shadow 0.2s ease, transform 0.2s ease;
-        }
-
-        .choice-card:hover {
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-            transform: translateY(-2px);
-            background: #ffffff;
-        }
-
-        .choice-card.selected {
-            border-color: #0077aa;
-            box-shadow: 0 0 0 2px rgba(0,119,170,0.25);
-            background: #f0fbff;
-        }
-
-        .choice-card h3 {
-            margin: 0 0 6px 0;
-            font-size: 1.2rem;
-            font-family: 'Playfair Display', serif;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .choice-card p {
-            margin: 4px 0;
-            font-size: 0.98rem;
-            color: #444;
-        }
-
-        .card-link {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #005f8f;
-            text-decoration: none;
-            border-bottom: 1px solid #005f8f;
-            padding-bottom: 2px;
-        }
-
-        .card-link:hover {
-            color: #003f5f;
-            border-bottom-color: #003f5f;
-        }
-
-        .nav-buttons {
-            text-align: center;
-            margin: 40px 0 20px 0;
-        }
-
-        .back-btn,
-        .next-btn {
-            padding: 10px 22px;
-            margin: 0 10px;
-            border-radius: 24px;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .back-btn {
-            background: #eee;
-            color: #333;
-        }
-
-        .next-btn {
-            background: #0077aa;
-            color: #fff;
-        }
-
-        #error-message {
-            display: none;
-            text-align: center;
-            color: #b00020;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-    </style>
-</head>
-<body>
-
-<div class="page-wrapper">
-    <h1>Day 2 – Beaufort Adventure</h1>
-    <p class="page-subtitle">Coffee, coastal wandering, and a peek at your future waterfront dream.</p>
-
-    <div id="error-message">Please choose a Morning option, a Late Morning option, an Afternoon option, and an Evening Dinner & Drinks option before continuing.</div>
-
-    <!-- MORNING -->
-    <section class="section" id="morning-section">
-        <h2>Morning – Coffee & Pastries</h2>
-        <p class="section-intro">All within a short walk from the Inlet Inn.</p>
-
-        <div class="choices-container">
-
-            <div class="choice-card" data-section="morning" data-choice="Cru Coffee Shop">
-                <h3>☕ Cru Coffee Shop</h3>
-                <p>Cozy café with pastries and specialty coffee.</p>
-                <a class="card-link" href="https://beaufortcru.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="morning" data-choice="Marmalade Café">
-                <h3>🥣 Marmalade Café</h3>
-                <p>Modern café with bowls, pastries, and great coffee.</p>
-                <a class="card-link" href="https://www.marmaladecafe.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="morning" data-choice="Spouter Inn Bakery">
-                <h3>🥐 Spouter Inn Bakery</h3>
-                <p>Waterfront pastries with a scenic walk.</p>
-                <a class="card-link" href="https://www.spouterinn.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="morning" data-choice="Breakfast Delivered">
-                <h3>🛎️ Breakfast Delivered</h3>
-                <p>Slow, cozy morning with breakfast brought to your room.</p>
-                <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
+        <div class="choice-card" data-section="drinks" data-choice="Aqua Bar">
+            <h3>🍸 Aqua Bar</h3>
+            <p>Craft cocktails, wine, and a cozy bar atmosphere.</p>
+            <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
         </div>
-    </section>
 
-    <!-- LATE MORNING -->
-    <section class="section" id="late-morning-section">
-        <h2>Late Morning – Choose One</h2>
-
-        <div class="choices-container">
-
-            <div class="choice-card" data-section="late-morning" data-choice="Explore Historic Beaufort">
-                <h3>🏘️ Explore Historic Beaufort</h3>
-                <p>Walk historic homes, shops, and the Old Burying Ground.</p>
-            </div>
-
-            <div class="choice-card" data-section="late-morning" data-choice="NC Maritime Museum">
-                <h3>🏛️ NC Maritime Museum</h3>
-                <p>Indoor exhibits including Blackbeard and coastal history.</p>
-            </div>
-
-            <div class="choice-card" data-section="late-morning" data-choice="Wild Horses Ferry">
-                <h3>🐎 Rachel Carson Reserve</h3>
-                <p>Short ferry ride to see wild horses and nature trails.</p>
-                <a class="card-link" href="https://islandferryadventures.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="late-morning" data-choice="Relax at the Inlet Inn">
-                <h3>🪑 Relax at the Inlet Inn</h3>
-                <p>Porch rocking chairs and marina views.</p>
-            </div>
-
+        <div class="choice-card" data-section="drinks" data-choice="Moonrakers Rooftop">
+            <h3>🍹 Moonrakers Rooftop</h3>
+            <p>Rooftop drinks with waterfront views and a relaxing vibe.</p>
+            <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
         </div>
-    </section>
 
-    <!-- LUNCH -->
-    <section class="section">
-        <h2>Lunch</h2>
-        <p class="section-intro">Waterfront favorites:</p>
-        <p style="text-align:center;">
-            <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank">Moonrakers</a> •
-            <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank">Front Street Grill</a> •
-            <a class="card-link" href="https://aquabeaufort.com/" target="_blank">Aqua</a>
-        </p>
-    </section>
-
-    <!-- AFTERNOON -->
-    <section class="section" id="afternoon-section">
-        <h2>Afternoon – Waterfront Property Exploration</h2>
-
-        <div class="choices-container">
-
-            <div class="choice-card" data-section="afternoon" data-choice="Merrimon Bay">
-                <h3>🏝️ Merrimon Bay (Garbacon)</h3>
-                <p>Private white-sand beach and Neuse River frontage.</p>
-                <a class="card-link" href="https://www.zillow.com/homedetails/257-Garbacon-Dr-LOT-106-Beaufort-NC-28516/2087961915_zpid/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="afternoon" data-choice="Jade Point">
-                <h3>🌿 Jade Point (Otway)</h3>
-                <p>Creekfront parcel with shoreline access.</p>
-                <a class="card-link" href="https://www.zillow.com/homedetails/122-Jade-St-LOT-27-Beaufort-NC-28516/2087879840_zpid/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="afternoon" data-choice="Vibe Map">
-                <h3>🗺️ Coastal Vibe Map</h3>
-                <p>Scenic drive exploring Merrimon, South River, Core Creek, and more.</p>
-            </div>
-
+        <div class="choice-card" data-section="drinks" data-choice="Front Street Grill Bar">
+            <h3>🍺 Front Street Grill Bar</h3>
+            <p>Casual bar with beer, cocktails, and dockside atmosphere.</p>
+            <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
         </div>
-    </section>
 
-    <!-- LATE AFTERNOON -->
-    <section class="section">
-        <h2>Late Afternoon – Waterfront Walk</h2>
-        <p class="section-intro">🌅 Taylor’s Creek boardwalk and marina views.</p>
-    </section>
-
-    <!-- EVENING -->
-    <section class="section" id="evening-section">
-        <h2>Evening – Dinner & Drinks (Choose One)</h2>
-
-        <div class="choices-container">
-
-            <div class="choice-card" data-section="evening" data-choice="Moonrakers">
-                <h3>🍽️ Moonrakers</h3>
-                <p>Upscale waterfront dining with rooftop seating.</p>
-                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="evening" data-choice="Aqua">
-                <h3>🍸 Aqua</h3>
-                <p>Small plates, craft cocktails, intimate ambiance.</p>
-                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="evening" data-choice="City Kitchen">
-                <h3>🍷 City Kitchen</h3>
-                <p>Soundfront dining with sunset views.</p>
-                <a class="card-link" href="https://citykitchenbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="evening" data-choice="Front Street Grill">
-                <h3>🐟 Front Street Grill</h3>
-                <p>Seafood-forward menu with waterfront seating.</p>
-                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
+        <div class="choice-card" data-section="drinks" data-choice="Black Sheep Drinks">
+            <h3>🍷 Black Sheep Drinks</h3>
+            <p>Relaxed spot for drinks with pizza and sandwiches.</p>
+            <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
         </div>
-    </section>
 
-    <!-- NAVIGATION -->
-    <div class="nav-buttons">
-        <button class="back-btn" onclick="goBack('dinner-and-drinks.html')">Back</button>
-        <button class="next-btn" onclick="validateAndNext()">Next</button>
+        <div class="choice-card" data-section="drinks" data-choice="Relax at the Inn">
+            <h3>🛏️ Relax at the Inn</h3>
+            <p>Skip the bar scene and unwind at the Inlet Inn with a quiet drink.</p>
+            <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+        </div>
+
     </div>
-</div>
-
-<script>
-    const cards = document.querySelectorAll('.choice-card');
-
-    cards.forEach(card => {
-        card.addEventListener('click', function (e) {
-            if (e.target.closest('.card-link')) return;
-
-            const section = this.dataset.section;
-            const choice = this.dataset.choice;
-
-            document.querySelectorAll(`.choice-card[data-section="${section}"]`)
-                .forEach(c => c.classList.remove('selected'));
-
-            this.classList.add('selected');
-
-            localStorage.setItem(`day2-${section}`, choice);
-            document.getElementById('error-message').style.display = 'none';
-        });
-    });
-
-    function validateAndNext() {
-        const morning = localStorage.getItem('day2-morning');
-        const lateMorning = localStorage.getItem('day2-late-morning');
-        const afternoon = localStorage.getItem('day2-afternoon');
-        const evening = localStorage.getItem('day2-evening');
-
-        if (!morning || !lateMorning || !afternoon || !evening) {
-            const error = document.getElementById('error-message');
-            error.style.display = 'block';
-
-            if (!morning) {
-                document.getElementById('morning-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!lateMorning) {
-                document.getElementById('late-morning-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!afternoon) {
-                document.getElementById('afternoon-section').scrollIntoView({ behavior: 'smooth' });
-            } else {
-                document.getElementById('evening-section').scrollIntoView({ behavior: 'smooth' });
-            }
-            return;
-        }
-
-        window.location.href = 'day3.html';
-    }
-
-    function goBack(page) {
-        window.location.href = page;
-    }
-</script>
-
-</body>
-</html>
-
-
+</section>
