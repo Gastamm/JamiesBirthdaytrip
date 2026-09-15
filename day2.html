@@ -5,7 +5,6 @@
     <title>Day 2 – Beaufort Adventure</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Shared styles + fonts -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -54,7 +53,7 @@
 
         .choices-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
@@ -62,10 +61,10 @@
         .choice-card {
             border-radius: 12px;
             border: 1px solid #ddd;
-            padding: 16px 18px;
+            padding: 18px 20px;
             background: #fafafa;
             cursor: pointer;
-            transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
         }
 
         .choice-card:hover {
@@ -84,6 +83,9 @@
             margin: 0 0 6px 0;
             font-size: 1.2rem;
             font-family: 'Playfair Display', serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .choice-card p {
@@ -92,19 +94,9 @@
             color: #444;
         }
 
-        .meta-line {
-            margin-top: 6px;
-            font-size: 0.9rem;
-            color: #333;
-        }
-
-        .meta-line span {
-            margin-right: 10px;
-        }
-
         .card-link {
             display: inline-block;
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 0.9rem;
             color: #005f8f;
             text-decoration: none;
@@ -149,14 +141,6 @@
             margin-bottom: 10px;
             font-size: 0.95rem;
         }
-
-        .simple-text-block {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1rem;
-            color: #444;
-        }
     </style>
 </head>
 <body>
@@ -167,179 +151,141 @@
 
     <div id="error-message">Please choose a Morning option, a Late Morning option, an Afternoon option, and an Evening Dinner & Drinks option before continuing.</div>
 
-    <!-- MORNING – COFFEE & PASTRIES -->
+    <!-- MORNING -->
     <section class="section" id="morning-section">
         <h2>Morning – Coffee & Pastries</h2>
-        <p class="section-intro">Start your day with something delicious, all within a short walk from the Inlet Inn.</p>
+        <p class="section-intro">All within a short walk from the Inlet Inn.</p>
 
         <div class="choices-container">
 
             <div class="choice-card" data-section="morning" data-choice="Cru Coffee Shop">
-                <h3>Cru Coffee Shop</h3>
-                <p>Pastries + coffee in a cozy local spot.</p>
-                <p class="meta-line"><span>🚶 2 min walk</span></p>
-                <a class="card-link"
-                   href="https://beaufortcru.com/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">More Info</a>
+                <h3>☕ Cru Coffee Shop</h3>
+                <p>Cozy café with pastries and specialty coffee.</p>
+                <a class="card-link" href="https://beaufortcru.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="morning" data-choice="Marmalade Café">
-                <h3>Marmalade Café</h3>
-                <p>Modern café with pastries, bowls, and great coffee.</p>
-                <p class="meta-line"><span>🚶 3 min walk</span></p>
-                <a class="card-link"
-                   href="https://www.marmaladecafe.com/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">More Info</a>
+                <h3>🥣 Marmalade Café</h3>
+                <p>Modern café with bowls, pastries, and great coffee.</p>
+                <a class="card-link" href="https://www.marmaladecafe.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="morning" data-choice="Spouter Inn Bakery">
-                <h3>Spouter Inn Bakery</h3>
+                <h3>🥐 Spouter Inn Bakery</h3>
                 <p>Waterfront pastries with a scenic walk.</p>
-                <p class="meta-line"><span>🚶 4 min walk</span></p>
-                <a class="card-link"
-                   href="https://www.spouterinn.com/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">More Info</a>
+                <a class="card-link" href="https://www.spouterinn.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
-            <div class="choice-card" data-section="morning" data-choice="Breakfast Delivered to the Room">
-                <h3>Breakfast Delivered to the Room</h3>
-                <p>Cozy, slow morning with breakfast brought to you.</p>
-                <p class="meta-line"><span>🚶 0 min walk</span></p>
-                <a class="card-link"
-                   href="https://inlet-inn.com/features-amenities/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">View Inlet Inn Amenities</a>
+            <div class="choice-card" data-section="morning" data-choice="Breakfast Delivered">
+                <h3>🛎️ Breakfast Delivered</h3>
+                <p>Slow, cozy morning with breakfast brought to your room.</p>
+                <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
         </div>
     </section>
 
-    <!-- LATE MORNING – BEAUFORT OPTIONS -->
+    <!-- LATE MORNING -->
     <section class="section" id="late-morning-section">
         <h2>Late Morning – Choose One</h2>
-        <p class="section-intro">Ease into the day with a bit of Beaufort history or simple relaxation.</p>
 
         <div class="choices-container">
+
             <div class="choice-card" data-section="late-morning" data-choice="Explore Historic Beaufort">
-                <h3>Explore Historic Beaufort</h3>
-                <p>Wander the Old Burying Ground, admire historic homes, and browse Front Street shops.</p>
+                <h3>🏘️ Explore Historic Beaufort</h3>
+                <p>Walk historic homes, shops, and the Old Burying Ground.</p>
             </div>
 
             <div class="choice-card" data-section="late-morning" data-choice="NC Maritime Museum">
-                <h3>NC Maritime Museum</h3>
-                <p>Indoor option with exhibits, including Blackbeard and coastal history.</p>
+                <h3>🏛️ NC Maritime Museum</h3>
+                <p>Indoor exhibits including Blackbeard and coastal history.</p>
             </div>
 
-            <div class="choice-card" data-section="late-morning" data-choice="Rachel Carson Reserve – Wild Horses">
-                <h3>Rachel Carson Reserve (Wild Horses Ferry)</h3>
-                <p>Short boat shuttle across Taylor’s Creek, walk the trails, and see the wild horses.</p>
-                <a class="card-link"
-                   href="https://islandferryadventures.com/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">More Info</a>
+            <div class="choice-card" data-section="late-morning" data-choice="Wild Horses Ferry">
+                <h3>🐎 Rachel Carson Reserve</h3>
+                <p>Short ferry ride to see wild horses and nature trails.</p>
+                <a class="card-link" href="https://islandferryadventures.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="late-morning" data-choice="Relax at the Inlet Inn">
-                <h3>Relax at the Inlet Inn</h3>
-                <p>Rocking chairs on the porch, marina views, and a quiet late morning.</p>
+                <h3>🪑 Relax at the Inlet Inn</h3>
+                <p>Porch rocking chairs and marina views.</p>
             </div>
+
         </div>
     </section>
 
     <!-- LUNCH -->
     <section class="section">
         <h2>Lunch</h2>
-        <div class="simple-text-block">
-            <p>Choose one of Beaufort’s waterfront favorites:</p>
-            <p>
-                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank">Moonrakers</a> •
-                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank">Front Street Grill</a> •
-                <a class="card-link" href="https://aquabeaufort.com/" target="_blank">Aqua</a>
-            </p>
-        </div>
+        <p class="section-intro">Waterfront favorites:</p>
+        <p style="text-align:center;">
+            <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank">Moonrakers</a> •
+            <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank">Front Street Grill</a> •
+            <a class="card-link" href="https://aquabeaufort.com/" target="_blank">Aqua</a>
+        </p>
     </section>
 
-    <!-- AFTERNOON – PROPERTY EXPLORATION -->
+    <!-- AFTERNOON -->
     <section class="section" id="afternoon-section">
         <h2>Afternoon – Waterfront Property Exploration</h2>
-        <p class="section-intro">Take a scenic drive to peek at your future waterfront dream, or explore coastal areas.</p>
 
         <div class="choices-container">
 
-            <div class="choice-card" data-section="afternoon" data-choice="Merrimon Bay – 257 Garbacon Dr">
-                <h3>257 Garbacon Dr LOT 106 – Merrimon Bay</h3>
-                <p>Private white‑sand beach with Neuse River frontage and dock potential.</p>
-                <p class="meta-line"><span>🚗 30–40 min drive</span></p>
-                <a class="card-link"
-                   href="https://www.zillow.com/homedetails/257-Garbacon-Dr-LOT-106-Beaufort-NC-28516/2087961915_zpid/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">View on Zillow</a>
+            <div class="choice-card" data-section="afternoon" data-choice="Merrimon Bay">
+                <h3>🏝️ Merrimon Bay (Garbacon)</h3>
+                <p>Private white-sand beach and Neuse River frontage.</p>
+                <a class="card-link" href="https://www.zillow.com/homedetails/257-Garbacon-Dr-LOT-106-Beaufort-NC-28516/2087961915_zpid/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
-            <div class="choice-card" data-section="afternoon" data-choice="Jade Point – 122 Jade St">
-                <h3>122 Jade St LOT 27 – Jade Point (Otway)</h3>
-                <p>Creek/marshfront parcel with shoreline access and dock feasibility.</p>
-                <p class="meta-line"><span>🚗 18–22 min drive</span></p>
-                <a class="card-link"
-                   href="https://www.zillow.com/homedetails/122-Jade-St-LOT-27-Beaufort-NC-28516/2087879840_zpid/"
-                   target="_blank"
-                   onclick="event.stopPropagation()">View on Zillow</a>
+            <div class="choice-card" data-section="afternoon" data-choice="Jade Point">
+                <h3>🌿 Jade Point (Otway)</h3>
+                <p>Creekfront parcel with shoreline access.</p>
+                <a class="card-link" href="https://www.zillow.com/homedetails/122-Jade-St-LOT-27-Beaufort-NC-28516/2087879840_zpid/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
-            <div class="choice-card" data-section="afternoon" data-choice="Explore Waterfront Land Areas">
-                <h3>Explore Waterfront Land Areas (Vibe Map)</h3>
-                <p>Scenic drive through quiet coastal roads with tidal creeks, sound‑front pockets, and ICW access.</p>
-                <p class="meta-line"><span>🚗 15–30 min drive</span></p>
-                <p>
-                    Merrimon / South River / Garbacon • Core Creek / North River • Harlowe / Clubfoot Creek •
-                    Newport → Nine Mile Road → Bogue Sound edges • Pelletier Creek pockets
-                </p>
+            <div class="choice-card" data-section="afternoon" data-choice="Vibe Map">
+                <h3>🗺️ Coastal Vibe Map</h3>
+                <p>Scenic drive exploring Merrimon, South River, Core Creek, and more.</p>
             </div>
 
         </div>
     </section>
 
-    <!-- LATE AFTERNOON – WATERFRONT WALK -->
+    <!-- LATE AFTERNOON -->
     <section class="section">
         <h2>Late Afternoon – Waterfront Walk</h2>
-        <div class="simple-text-block">
-            Stroll Taylor’s Creek boardwalk, watch the boats, and enjoy shaded benches along the Beaufort waterfront
-            before dinner.
-        </div>
+        <p class="section-intro">🌅 Taylor’s Creek boardwalk and marina views.</p>
     </section>
 
-    <!-- EVENING – DINNER & DRINKS (CHOICE REQUIRED) -->
+    <!-- EVENING -->
     <section class="section" id="evening-section">
         <h2>Evening – Dinner & Drinks (Choose One)</h2>
-        <p class="section-intro">Pick your perfect waterfront dinner spot.</p>
 
         <div class="choices-container">
 
             <div class="choice-card" data-section="evening" data-choice="Moonrakers">
-                <h3>Moonrakers</h3>
-                <p>Rooftop seating, waterfront views, upscale coastal cuisine.</p>
-                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+                <h3>🍽️ Moonrakers</h3>
+                <p>Upscale waterfront dining with rooftop seating.</p>
+                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="evening" data-choice="Aqua">
-                <h3>Aqua</h3>
-                <p>Craft cocktails, fresh seafood, intimate atmosphere.</p>
-                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+                <h3>🍸 Aqua</h3>
+                <p>Small plates, craft cocktails, intimate ambiance.</p>
+                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="evening" data-choice="City Kitchen">
-                <h3>City Kitchen</h3>
-                <p>Soundfront dining with sunset views and modern coastal dishes.</p>
-                <a class="card-link" href="https://citykitchenbeaufort.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+                <h3>🍷 City Kitchen</h3>
+                <p>Soundfront dining with sunset views.</p>
+                <a class="card-link" href="https://citykitchenbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="evening" data-choice="Front Street Grill">
-                <h3>Front Street Grill</h3>
-                <p>Classic Beaufort waterfront dining with a lively atmosphere.</p>
-                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">More Info</a>
+                <h3>🐟 Front Street Grill</h3>
+                <p>Seafood-forward menu with waterfront seating.</p>
+                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
         </div>
@@ -353,7 +299,6 @@
 </div>
 
 <script>
-    // Card selection logic
     const cards = document.querySelectorAll('.choice-card');
 
     cards.forEach(card => {
@@ -405,4 +350,5 @@
 
 </body>
 </html>
+
 
