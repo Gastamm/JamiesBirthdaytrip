@@ -94,6 +94,14 @@
             color: #444;
         }
 
+        .distance-line {
+            margin-top: 6px;
+            font-size: 0.9rem;
+            color: #333;
+            display: flex;
+            gap: 14px;
+        }
+
         .card-link {
             display: inline-block;
             margin-top: 10px;
@@ -190,24 +198,48 @@
 
             <div class="choice-card" data-section="midday" data-choice="Visit New Bern">
                 <h3>🏙️ Visit New Bern</h3>
-                <p>Walk the historic district, waterfront, and charming shops.</p>
+                <p>Walk the historic district, waterfront, shops, and get the vibe.</p>
+                <div class="distance-line">
+                    <span>🕒 +10 min</span>
+                    <span>📍 +10 miles</span>
+                </div>
                 <a class="card-link" href="https://visitnewbern.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="midday" data-choice="New Bern Lunch">
-                <h3>🍽️ Late Lunch in New Bern</h3>
-                <p>Stop for a relaxing lunch before the final drive home.</p>
-                <a class="card-link" href="https://www.thespringnewbern.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <h3>🍽️ Lunch in New Bern</h3>
+                <p>Relaxing lunch at Persimmons, Cypress Hall, or The Spring.</p>
+                <div class="distance-line">
+                    <span>🕒 +10 min</span>
+                    <span>📍 +10 miles</span>
+                </div>
+            </div>
+
+            <div class="choice-card" data-section="midday" data-choice="Morehead Lunch">
+                <h3>🍤 Lunch in Morehead City</h3>
+                <p>Try a new spot before heading home (Southern Salt or Ruddy Duck).</p>
+                <div class="distance-line">
+                    <span>🕒 +5 min</span>
+                    <span>📍 +5 miles</span>
+                </div>
             </div>
 
             <div class="choice-card" data-section="midday" data-choice="Creekfront Drive">
                 <h3>🌿 Creekfront Scenic Drive</h3>
                 <p>Quiet roads through Otway, Harlowe, and Core Creek.</p>
+                <div class="distance-line">
+                    <span>🕒 +15 min</span>
+                    <span>📍 +10 miles</span>
+                </div>
             </div>
 
             <div class="choice-card" data-section="midday" data-choice="Soundfront Detour">
                 <h3>🌊 Bogue Sound Detour</h3>
                 <p>Drive Nine Mile Road and enjoy the soundfront scenery.</p>
+                <div class="distance-line">
+                    <span>🕒 +10 min</span>
+                    <span>📍 +5 miles</span>
+                </div>
             </div>
 
         </div>
@@ -220,19 +252,51 @@
 
         <div class="choices-container">
 
+            <div class="choice-card" data-section="afternoon" data-choice="Merrimon Bay">
+                <h3>🏝️ Merrimon / South River / Garbacon</h3>
+                <p>White‑sand beaches, riverfront, and dreamhouse scouting.</p>
+                <div class="distance-line">
+                    <span>🕒 +40 min</span>
+                    <span>📍 +25 miles</span>
+                </div>
+                <a class="card-link" href="https://www.zillow.com/homedetails/257-Garbacon-Dr-LOT-106-Beaufort-NC-28516/2087961915_zpid/" target="_blank" onclick="event.stopPropagation()">View on Zillow</a>
+            </div>
+
+            <div class="choice-card" data-section="afternoon" data-choice="Jade Point">
+                <h3>🌿 Jade Point (Otway)</h3>
+                <p>Creekfront parcel with shoreline access.</p>
+                <div class="distance-line">
+                    <span>🕒 +15 min</span>
+                    <span>📍 +10 miles</span>
+                </div>
+                <a class="card-link" href="https://www.zillow.com/homedetails/122-Jade-St-LOT-27-Beaufort-NC-28516/2087879840_zpid/" target="_blank" onclick="event.stopPropagation()">View on Zillow</a>
+            </div>
+
             <div class="choice-card" data-section="afternoon" data-choice="Clubfoot Creek">
                 <h3>🛶 Clubfoot Creek</h3>
                 <p>Quiet waterfront area with marsh views and peaceful roads.</p>
+                <div class="distance-line">
+                    <span>🕒 +20 min</span>
+                    <span>📍 +10 miles</span>
+                </div>
             </div>
 
             <div class="choice-card" data-section="afternoon" data-choice="Pelletier Creek">
                 <h3>🌾 Pelletier Creek</h3>
                 <p>Small waterfront pockets tucked behind Morehead City.</p>
+                <div class="distance-line">
+                    <span>🕒 +10 min</span>
+                    <span>📍 +5 miles</span>
+                </div>
             </div>
 
             <div class="choice-card" data-section="afternoon" data-choice="Straight Home">
                 <h3>🚗 Head Home</h3>
                 <p>Skip the stops and enjoy a smooth drive back to Fuquay‑Varina.</p>
+                <div class="distance-line">
+                    <span>🕒 0 min</span>
+                    <span>📍 0 miles</span>
+                </div>
             </div>
 
         </div>
@@ -293,4 +357,5 @@
 
 </body>
 </html>
+
 
