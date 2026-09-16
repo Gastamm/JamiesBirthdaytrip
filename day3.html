@@ -12,17 +12,17 @@
         body {
             font-family: 'Lato', sans-serif;
             margin: 0;
-            background: linear-gradient(180deg, #e8f1f5, #ffffff);
+            background: #ffffff;
         }
 
-        /* Faint map texture overlay */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
-            background: url('images/map-texture.png');
+            background: url('images/marina-wood.jpg');
             background-size: cover;
-            opacity: 0.06;
+            background-position: center;
+            opacity: 0.10;
             pointer-events: none;
         }
 
@@ -44,7 +44,15 @@
         .page-subtitle {
             text-align: center;
             color: #555;
+            margin-bottom: 10px;
+        }
+
+        .instruction-line {
+            text-align: center;
+            color: #777;
+            font-size: 0.95rem;
             margin-bottom: 30px;
+            font-style: italic;
         }
 
         .section {
@@ -56,12 +64,6 @@
             font-size: 1.8rem;
             text-align: center;
             margin-bottom: 10px;
-        }
-
-        .section p.section-intro {
-            text-align: center;
-            color: #555;
-            margin-bottom: 20px;
         }
 
         .choices-container {
@@ -108,11 +110,10 @@
         }
 
         .distance-line {
-            margin-top: 6px;
+            margin-top: 10px;
             font-size: 0.9rem;
             color: #333;
-            display: flex;
-            gap: 14px;
+            line-height: 1.3;
         }
 
         .card-link {
@@ -168,236 +169,108 @@
 
 <div class="page-wrapper">
     <h1>Day 3 – Heading Home</h1>
-    <p class="page-subtitle">A gentle final morning, a scenic drive, and a few last coastal stops.</p>
+    <p class="page-subtitle">Choose your final Beaufort moment.</p>
+
+    <p class="instruction-line">Curious? Tap “Learn More.” Decided? Tap the card.</p>
 
     <div id="error-message">
-        Please choose a <strong>Breakfast</strong> option, a <strong>Midday Activity</strong>, and an <strong>Afternoon Option</strong> before continuing.
+        Please choose a <strong>Heading Home</strong> option before continuing.
     </div>
 
-    <!-- BREAKFAST -->
-    <section class="section" id="breakfast-section">
-        <h2>Breakfast – Choose One</h2>
-        <p class="section-intro">Grab something delicious before heading inland.</p>
+    <!-- HEADING HOME -->
+    <section class="section" id="heading-section">
+        <h2>Heading Home – Choose One</h2>
 
         <div class="choices-container">
 
-            <div class="choice-card" data-section="breakfast" data-choice="Bakehouse">
-                <h3>🥐 The Bakehouse</h3>
-                <p>Fresh pastries, breakfast sandwiches, and a cozy local vibe.</p>
+            <div class="choice-card" data-section="heading" data-choice="Cru Coffee Farewell">
+                <h3>☕ Farewell Coffee at Cru</h3>
+                <p>A final cozy stop before hitting the road.</p>
                 <div class="distance-line">
-                    <span>🚶 6 min</span>
+                    <span>🚶 6 min</span><br>
                     <span>🚗 2 min</span>
-                </div>
-                <a class="card-link" href="https://www.facebook.com/thebakehousebeaufort/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="breakfast" data-choice="Turner Street Market">
-                <h3>🥯 Turner Street Market</h3>
-                <p>Grab‑and‑go baked goods and coffee for the road.</p>
-                <div class="distance-line">
-                    <span>🚶 5 min</span>
-                    <span>🚗 2 min</span>
-                </div>
-                <a class="card-link" href="https://www.facebook.com/turnerstreetmarket/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="breakfast" data-choice="Cru Again">
-                <h3>☕ Cru Coffee Shop</h3>
-                <p>One more stop at your favorite Beaufort café.</p>
-                <div class="distance-line">
-                    <span>🚶 4 min</span>
-                    <span>🚗 1 min</span>
                 </div>
                 <a class="card-link" href="https://beaufortcru.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
-        </div>
-    </section>
-
-    <!-- MIDDAY OPTIONS -->
-    <section class="section" id="midday-section">
-        <h2>Midday Options – Choose One</h2>
-        <p class="section-intro">Ease into the drive home with a stop or a scenic detour.</p>
-
-        <div class="choices-container">
-
-            <!-- NEW BERN OPTIONS -->
-            <div class="choice-card" data-section="midday" data-choice="Visit New Bern">
-                <h3>🏙️ Visit New Bern</h3>
-                <p>Walk the historic district, waterfront, shops, and get the vibe.</p>
+            <div class="choice-card" data-section="heading" data-choice="Waterfront Walk Farewell">
+                <h3>🚶 Last Waterfront Walk</h3>
+                <p>One more peaceful stroll along Taylor’s Creek.</p>
                 <div class="distance-line">
-                    <span>🚗 35 min</span>
-                </div>
-                <a class="card-link" href="https://visitnewbern.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="New Bern Lunch - Persimmons">
-                <h3>🍽️ Lunch in New Bern – Persimmons</h3>
-                <p>Waterfront dining with modern coastal cuisine.</p>
-                <div class="distance-line">
-                    <span>🚗 35 min</span>
-                </div>
-                <a class="card-link" href="https://persimmonsrestaurant.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="New Bern Lunch - Cypress Hall">
-                <h3>🍽️ Lunch in New Bern – Cypress Hall</h3>
-                <p>Southern-inspired dishes in a stylish downtown setting.</p>
-                <div class="distance-line">
-                    <span>🚗 35 min</span>
-                </div>
-                <a class="card-link" href="https://cypresshallnc.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="New Bern Lunch - The Spring">
-                <h3>🍽️ Lunch in New Bern – The Spring</h3>
-                <p>Modern American cuisine with fresh seasonal ingredients.</p>
-                <div class="distance-line">
-                    <span>🚗 35 min</span>
-                </div>
-                <a class="card-link" href="https://www.thespringnewbern.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <!-- NEW BERN — BREWERY & DISTILLERY -->
-            <div class="choice-card" data-section="midday" data-choice="Brewery 99">
-                <h3>🍺 Brewery 99</h3>
-                <p>Small-batch craft brewery with a cozy local vibe.</p>
-                <div class="distance-line">
-                    <span>🚗 35 min</span>
-                </div>
-                <a class="card-link" href="https://brewery99.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="Beaufort Spirits Company">
-                <h3>🥃 Beaufort Spirits Company</h3>
-                <p>Craft rum, whiskey, and small‑batch spirits from a Beaufort distillery.</p>
-                <div class="distance-line">
-                    <span>🚶 12 min</span>
-                    <span>🚗 3 min</span>
-                </div>
-                <a class="card-link" href="https://beaufortspiritscompany.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <!-- MOREHEAD CITY OPTIONS -->
-            <div class="choice-card" data-section="midday" data-choice="Morehead Lunch - Southern Salt">
-                <h3>🍤 Lunch in Morehead – Southern Salt</h3>
-                <p>Waterfront seafood with a casual coastal vibe.</p>
-                <div class="distance-line">
-                    <span>🚗 10 min</span>
-                </div>
-                <a class="card-link" href="https://southernsaltseafood.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="Morehead Lunch - Ruddy Duck">
-                <h3>🍤 Lunch in Morehead – Ruddy Duck Tavern</h3>
-                <p>Popular waterfront spot with great sandwiches and seafood.</p>
-                <div class="distance-line">
-                    <span>🚗 10 min</span>
-                </div>
-                <a class="card-link" href="https://ruddyducktavern.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="Morehead Lunch - Red Fish Grill">
-                <h3>🍤 Lunch in Morehead – Red Fish Grill</h3>
-                <p>Upscale casual seafood-forward dining.</p>
-                <div class="distance-line">
-                    <span>🚗 10 min</span>
-                </div>
-                <a class="card-link" href="https://www.redfishgrill.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="Morehead Lunch - Banks Grill">
-                <h3>🍤 Lunch in Morehead – The Banks Grill</h3>
-                <p>Local favorite with hearty coastal dishes.</p>
-                <div class="distance-line">
-                    <span>🚗 10 min</span>
-                </div>
-                <a class="card-link" href="https://www.facebook.com/thebanksgrill/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <!-- BEAUFORT OPTIONS -->
-            <div class="choice-card" data-section="midday" data-choice="Beaufort Lunch - Floyds">
-                <h3>🍽️ Lunch in Beaufort – Floyd’s 1921</h3>
-                <p>Southern coastal cuisine in a charming historic home.</p>
-                <div class="distance-line">
-                    <span>🚶 10 min</span>
-                    <span>🚗 3 min</span>
-                </div>
-                <a class="card-link" href="https://www.floyds1921.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="Beaufort Lunch - Beaufort Cafe">
-                <h3>🍽️ Lunch in Beaufort – Beaufort Café</h3>
-                <p>Classic southern lunch spot with comfort favorites.</p>
-                <div class="distance-line">
-                    <span>🚶 8 min</span>
-                    <span>🚗 2 min</span>
-                </div>
-                <a class="card-link" href="https://www.facebook.com/beaufortcafe/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="midday" data-choice="Beaufort Lunch - Banks Grill">
-                <h3>🍽️ Lunch in Beaufort – The Banks Grill</h3>
-                <p>Local favorite serving hearty coastal dishes.</p>
-                <div class="distance-line">
-                    <span>🚶 10 min</span>
-                    <span>🚗 3 min</span>
-                </div>
-                <a class="card-link" href="https://www.facebook.com/thebanksgrill/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <!-- SCENIC DRIVES -->
-            <div class="choice-card" data-section="midday" data-choice="Creekfront Drive">
-                <h3>🌿 Creekfront Scenic Drive</h3>
-                <p>Quiet roads through Otway, Harlowe, and Core Creek.</p>
-                <div class="distance-line">
-                    <span>🚗 20 min</span>
+                    <span>🚶 1 min</span><br>
+                    <span>🚗 0 min</span>
                 </div>
             </div>
 
-            <div class="choice-card" data-section="midday" data-choice="Soundfront Detour">
-                <h3>🌊 Bogue Sound Detour</h3>
-                <p>Drive Nine Mile Road and enjoy the soundfront scenery.</p>
+            <div class="choice-card" data-section="heading" data-choice="Fort Macon Farewell">
+                <h3>🏰 Fort Macon Stop</h3>
+                <p>A scenic detour with ocean views before heading home.</p>
                 <div class="distance-line">
-                    <span>🚗 15 min</span>
+                    <span>🚶 0 min</span><br>
+                    <span>🚗 18 min</span>
                 </div>
+                <a class="card-link" href="https://www.ncparks.gov/fort-macon-state-park" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="heading" data-choice="Breakfast Grocery Farewell">
+                <h3>🍳 Breakfast at Beaufort Grocery</h3>
+                <p>A final Beaufort meal before the drive.</p>
+                <div class="distance-line">
+                    <span>🚶 4 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+                <a class="card-link" href="https://www.beaufortgrocery.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
             </div>
 
         </div>
     </section>
 
-    <!-- AFTERNOON OPTIONS -->
-    <section class="section" id="afternoon-section">
-        <h2>Afternoon – Choose One</h2>
-        <p class="section-intro">One last coastal moment before heading home.</p>
+    <div class="nav-buttons">
+        <button class="back-btn" onclick="goBack('day2.html')">Back</button>
+        <button class="next-btn" onclick="validateAndNext()">Next</button>
+    </div>
+</div>
 
-        <div class="choices-container">
+<script>
+    const cards = document.querySelectorAll('.choice-card');
 
-            <div class="choice-card" data-section="afternoon" data-choice="Merrimon Bay">
-                <h3>🏝️ Merrimon / South River / Garbacon</h3>
-                <p>White‑sand beaches, riverfront, and dreamhouse scouting.</p>
-                <div class="distance-line">
-                    <span>🚗 40 min</span>
-                </div>
-                <a class="card-link" href="https://www.zillow.com/homedetails/257-Garbacon-Dr-LOT-106-Beaufort-NC-28516/2087961915_zpid/" target="_blank" onclick="event.stopPropagation()">View on Zillow</a>
-            </div>
+    cards.forEach(card => {
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('.card-link')) return;
 
-            <div class="choice-card" data-section="afternoon" data-choice="Jade Point">
-                <h3>🌿 Jade Point (Otway)</h3>
-                <p>Creekfront parcel with shoreline access.</p>
-                <div class="distance-line">
-                    <span>🚗 15 min</span>
-                </div>
-                <a class="card-link" href="https://www.zillow.com/homeddetails/122-Jade-St-LOT-27-Beaufort-NC-28516/2087879840_zpid/" target="_blank" onclick="event.stopPropagation()">View on Zillow</a>
-            </div>
+            const section = this.dataset.section;
+            const choice = this.dataset.choice;
 
-            <div class="choice-card" data-section="afternoon" data-choice="Clubfoot Creek">
-                <h3>🛶 Clubfoot Creek</h3>
-                <p>Quiet waterfront area with marsh views and peaceful roads.</p>
-                <div class="distance-line">
-                    <span>🚗 20 min</span>
-                </div>
-            </div>
+            document.querySelectorAll(`.choice-card[data-section="${section}"]`)
+                .forEach(c => c.classList.remove('selected'));
+
+            this.classList.add('selected');
+
+            localStorage.setItem(`day3-${section}`, choice);
+            document.getElementById('error-message').style.display = 'none';
+        });
+    });
+
+    function validateAndNext() {
+        const heading = localStorage.getItem('day3-heading');
+
+        if (!heading) {
+            const error = document.getElementById('error-message');
+            error.style.display = 'block';
+            document.getElementById('heading-section').scrollIntoView({ behavior: 'smooth' });
+            return;
+        }
+
+        window.location.href = 'final.html';
+    }
+
+    function goBack(page) {
+        window.location.href = page;
+    }
+</script>
+
+</body>
+</html>
 
             <div class="choice-card" data-section="afternoon" data-choice="Pelletier Creek">
                 <h3>🌾 Pelletier Creek</h3>
