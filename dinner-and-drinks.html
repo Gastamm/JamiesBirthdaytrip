@@ -260,6 +260,130 @@
                     <span>🚗 1 min</span>
                 </div>
 
+                <a class="card-link" href="https://aquaexperience.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
 
+            <div class="choice-card" data-section="drinks" data-choice="Moonrakers Rooftop">
+                <h3>🍹 Moonrakers Rooftop</h3>
+                <p>Drinks on the rooftop with waterfront views.</p>
 
+                <div class="distance-line">
+                    <span>🚶 3 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
 
+                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Front Street Grill Bar">
+                <h3>🍺 Front Street Grill Bar</h3>
+                <p>Casual bar with beer, cocktails, and dockside atmosphere.</p>
+
+                <div class="distance-line">
+                    <span>🚶 3 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+
+                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Black Sheep Drinks">
+                <h3>🍷 Black Sheep Drinks</h3>
+                <p>Relaxed spot for drinks with pizza and sandwiches.</p>
+
+                <div class="distance-line">
+                    <span>🚶 5 min</span><br>
+                    <span>🚗 2 min</span>
+                </div>
+
+                <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Relax at the Inn">
+                <h3>🛏️ Relax at the Inn</h3>
+                <p>Skip the bar scene and unwind at the Inlet Inn with a quiet drink.</p>
+
+                <!-- NO DISTANCE BLOCK -->
+
+                <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Fishtowne Brew House">
+                <h3>🍺 Fishtowne Brew House</h3>
+                <p>Local Beaufort brewery with small-batch craft beer and a cozy taproom.</p>
+
+                <div class="distance-line">
+                    <span>🚶 7 min</span><br>
+                    <span>🚗 3 min</span>
+                </div>
+
+                <a class="card-link" href="https://www.fishtownebrewhouse.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Beaufort Distilling Co">
+                <h3>🥃 Beaufort Distilling Co.</h3>
+                <p>Craft rum and whiskey distilled in Beaufort with a welcoming tasting room.</p>
+
+                <div class="distance-line">
+                    <span>🚶 10 min</span><br>
+                    <span>🚗 4 min</span>
+                </div>
+
+                <a class="card-link" href="https://www.beaufortdistilling.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <button class="back-btn" onclick="goBack('arrival.html')">Back</button>
+        <button class="next-btn" onclick="validateAndNext()">Next</button>
+    </div>
+</div>
+
+<script>
+    const cards = document.querySelectorAll('.choice-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('.card-link')) return;
+
+            const section = this.dataset.section;
+            const choice = this.dataset.choice;
+
+            document.querySelectorAll(`.choice-card[data-section="${section}"]`)
+                .forEach(c => c.classList.remove('selected'));
+
+            this.classList.add('selected');
+
+            localStorage.setItem(`dinner-drinks-${section}`, choice);
+            document.getElementById('error-message').style.display = 'none';
+        });
+    });
+
+    function validateAndNext() {
+        const dinner = localStorage.getItem('dinner-drinks-dinner');
+        const drinks = localStorage.getItem('dinner-drinks-drinks');
+
+        if (!dinner || !drinks) {
+            const error = document.getElementById('error-message');
+            error.style.display = 'block';
+
+            if (!dinner) {
+                document.getElementById('dinner-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (!drinks) {
+                document.getElementById('drinks-section').scrollIntoView({ behavior: 'smooth' });
+            }
+            return;
+        }
+
+        window.location.href = 'day2.html';
+    }
+
+    function goBack(page) {
+        window.location.href = page;
+    }
+</script>
+
+</body>
+</html>
