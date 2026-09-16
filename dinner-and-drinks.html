@@ -31,7 +31,15 @@
         .page-subtitle {
             text-align: center;
             color: #555;
+            margin-bottom: 10px;
+        }
+
+        .instruction-line {
+            text-align: center;
+            color: #777;
+            font-size: 0.95rem;
             margin-bottom: 30px;
+            font-style: italic;
         }
 
         .section {
@@ -143,6 +151,8 @@
     <h1>Dinner & Drinks</h1>
     <p class="page-subtitle">Choose your perfect Beaufort evening.</p>
 
+    <p class="instruction-line">Curious? Tap “Learn More.” Decided? Tap the card.</p>
+
     <div id="error-message">
         Please choose both a <strong>Dinner</strong> option and a <strong>Drinks</strong> option before continuing.
     </div>
@@ -162,7 +172,7 @@
             <div class="choice-card" data-section="dinner" data-choice="Aqua">
                 <h3>🍸 Aqua Restaurant</h3>
                 <p>Small plates, craft cocktails, and an intimate ambiance.</p>
-                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <a class="card-link" href="https://aquaexperience.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="dinner" data-choice="Beaufort Grocery Co">
@@ -195,7 +205,7 @@
             <div class="choice-card" data-section="drinks" data-choice="Aqua Bar">
                 <h3>🍸 Aqua Bar</h3>
                 <p>Craft cocktails, wine, and a cozy bar atmosphere.</p>
-                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <a class="card-link" href="https://aquaexperience.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="drinks" data-choice="Moonrakers Rooftop">
@@ -220,6 +230,19 @@
                 <h3>🛏️ Relax at the Inn</h3>
                 <p>Skip the bar scene and unwind at the Inlet Inn with a quiet drink.</p>
                 <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <!-- NEW: Beaufort Breweries & Distilleries -->
+            <div class="choice-card" data-section="drinks" data-choice="Fishtowne Brew House">
+                <h3>🍺 Fishtowne Brew House</h3>
+                <p>Local Beaufort brewery with small-batch craft beer and a cozy taproom.</p>
+                <a class="card-link" href="https://www.fishtownebrewhouse.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Beaufort Distilling Co">
+                <h3>🥃 Beaufort Distilling Co.</h3>
+                <p>Craft rum and whiskey distilled in Beaufort with a welcoming tasting room.</p>
+                <a class="card-link" href="https://www.beaufortdistilling.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
         </div>
@@ -277,4 +300,5 @@
 
 </body>
 </html>
+
 
