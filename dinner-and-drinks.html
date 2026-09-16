@@ -15,10 +15,22 @@
             background: #ffffff;
         }
 
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url('images/water-ripple-texture.png');
+            background-size: cover;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
         .page-wrapper {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
@@ -96,6 +108,13 @@
             color: #444;
         }
 
+        .distance-line {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 1.3;
+        }
+
         .card-link {
             display: inline-block;
             margin-top: 10px;
@@ -166,30 +185,60 @@
             <div class="choice-card" data-section="dinner" data-choice="Moonrakers">
                 <h3>🍽️ Moonrakers</h3>
                 <p>Upscale waterfront dining with rooftop seating and refined coastal cuisine.</p>
+
+                <div class="distance-line">
+                    <span>🚶 3 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+
                 <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="dinner" data-choice="Aqua">
                 <h3>🍸 Aqua Restaurant</h3>
                 <p>Small plates, craft cocktails, and an intimate ambiance.</p>
+
+                <div class="distance-line">
+                    <span>🚶 2 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+
                 <a class="card-link" href="https://aquaexperience.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="dinner" data-choice="Beaufort Grocery Co">
                 <h3>🥗 Beaufort Grocery Co.</h3>
                 <p>Local favorite offering refined coastal dishes in a charming bistro setting.</p>
+
+                <div class="distance-line">
+                    <span>🚶 4 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+
                 <a class="card-link" href="https://beaufortgrocery.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="dinner" data-choice="Front Street Grill">
                 <h3>🐟 Front Street Grill</h3>
                 <p>Seafood-forward menu with waterfront seating and classic Beaufort charm.</p>
+
+                <div class="distance-line">
+                    <span>🚶 3 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+
                 <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
             <div class="choice-card" data-section="dinner" data-choice="Black Sheep">
                 <h3>🍕 Black Sheep</h3>
                 <p>Casual dining with excellent sandwiches, pizza, and a lively local vibe.</p>
+
+                <div class="distance-line">
+                    <span>🚶 5 min</span><br>
+                    <span>🚗 2 min</span>
+                </div>
+
                 <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
@@ -205,100 +254,12 @@
             <div class="choice-card" data-section="drinks" data-choice="Aqua Bar">
                 <h3>🍸 Aqua Bar</h3>
                 <p>Craft cocktails, wine, and a cozy bar atmosphere.</p>
-                <a class="card-link" href="https://aquaexperience.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
 
-            <div class="choice-card" data-section="drinks" data-choice="Moonrakers Rooftop">
-                <h3>🍹 Moonrakers Rooftop</h3>
-                <p>Drinks on the rooftop with waterfront views.</p>
-                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
+                <div class="distance-line">
+                    <span>🚶 2 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
 
-            <div class="choice-card" data-section="drinks" data-choice="Front Street Grill Bar">
-                <h3>🍺 Front Street Grill Bar</h3>
-                <p>Casual bar with beer, cocktails, and dockside atmosphere.</p>
-                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
 
-            <div class="choice-card" data-section="drinks" data-choice="Black Sheep Drinks">
-                <h3>🍷 Black Sheep Drinks</h3>
-                <p>Relaxed spot for drinks with pizza and sandwiches.</p>
-                <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Relax at the Inn">
-                <h3>🛏️ Relax at the Inn</h3>
-                <p>Skip the bar scene and unwind at the Inlet Inn with a quiet drink.</p>
-                <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <!-- NEW: Beaufort Breweries & Distilleries -->
-            <div class="choice-card" data-section="drinks" data-choice="Fishtowne Brew House">
-                <h3>🍺 Fishtowne Brew House</h3>
-                <p>Local Beaufort brewery with small-batch craft beer and a cozy taproom.</p>
-                <a class="card-link" href="https://www.fishtownebrewhouse.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Beaufort Distilling Co">
-                <h3>🥃 Beaufort Distilling Co.</h3>
-                <p>Craft rum and whiskey distilled in Beaufort with a welcoming tasting room.</p>
-                <a class="card-link" href="https://www.beaufortdistilling.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="nav-buttons">
-        <button class="back-btn" onclick="goBack('arrival.html')">Back</button>
-        <button class="next-btn" onclick="validateAndNext()">Next</button>
-    </div>
-</div>
-
-<script>
-    const cards = document.querySelectorAll('.choice-card');
-
-    cards.forEach(card => {
-        card.addEventListener('click', function (e) {
-            if (e.target.closest('.card-link')) return;
-
-            const section = this.dataset.section;
-            const choice = this.dataset.choice;
-
-            document.querySelectorAll(`.choice-card[data-section="${section}"]`)
-                .forEach(c => c.classList.remove('selected'));
-
-            this.classList.add('selected');
-
-            localStorage.setItem(`dinner-and-drinks-${section}`, choice);
-            document.getElementById('error-message').style.display = 'none';
-        });
-    });
-
-    function validateAndNext() {
-        const dinner = localStorage.getItem('dinner-and-drinks-dinner');
-        const drinks = localStorage.getItem('dinner-and-drinks-drinks');
-
-        if (!dinner || !drinks) {
-            const error = document.getElementById('error-message');
-            error.style.display = 'block';
-
-            if (!dinner) {
-                document.getElementById('dinner-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!drinks) {
-                document.getElementById('drinks-section').scrollIntoView({ behavior: 'smooth' });
-            }
-            return;
-        }
-
-        window.location.href = 'day2.html';
-    }
-
-    function goBack(page) {
-        window.location.href = page;
-    }
-</script>
-
-</body>
-</html>
 
 
