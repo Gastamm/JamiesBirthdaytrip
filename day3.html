@@ -109,13 +109,6 @@
             color: #444;
         }
 
-        .distance-line {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #333;
-            line-height: 1.3;
-        }
-
         .card-link {
             display: inline-block;
             margin-top: 10px;
@@ -169,66 +162,143 @@
 
 <div class="page-wrapper">
     <h1>Day 3 – Heading Home</h1>
-    <p class="page-subtitle">Choose your final Beaufort moment.</p>
+    <p class="page-subtitle">Choose your final Beaufort adventure.</p>
 
     <p class="instruction-line">Curious? Tap “Learn More.” Decided? Tap the card.</p>
 
     <div id="error-message">
-        Please choose a <strong>Heading Home</strong> option before continuing.
+        Please choose <strong>Breakfast</strong>, <strong>Midday Path</strong>, <strong>Lunch</strong>, and <strong>Afternoon</strong> before continuing.
     </div>
 
-    <!-- HEADING HOME -->
-    <section class="section" id="heading-section">
-        <h2>Heading Home – Choose One</h2>
+    <!-- BREAKFAST -->
+    <section class="section" id="breakfast-section">
+        <h2>Breakfast – Choose One</h2>
 
         <div class="choices-container">
 
-            <div class="choice-card" data-section="heading" data-choice="Cru Coffee Farewell">
-                <h3>☕ Farewell Coffee at Cru</h3>
-                <p>A final cozy stop before hitting the road.</p>
-                <div class="distance-line">
-                    <span>🚶 6 min</span><br>
-                    <span>🚗 2 min</span>
-                </div>
+            <div class="choice-card" data-section="breakfast" data-choice="Cru Coffee">
+                <h3>☕ Cru Coffee</h3>
+                <p>A final cozy Beaufort morning.</p>
                 <a class="card-link" href="https://beaufortcru.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
-            <div class="choice-card" data-section="heading" data-choice="Waterfront Walk Farewell">
-                <h3>🚶 Last Waterfront Walk</h3>
-                <p>One more peaceful stroll along Taylor’s Creek.</p>
-                <div class="distance-line">
-                    <span>🚶 1 min</span><br>
-                    <span>🚗 0 min</span>
-                </div>
-            </div>
-
-            <div class="choice-card" data-section="heading" data-choice="Fort Macon Farewell">
-                <h3>🏰 Fort Macon Stop</h3>
-                <p>A scenic detour with ocean views before heading home.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 18 min</span>
-                </div>
-                <a class="card-link" href="https://www.ncparks.gov/fort-macon-state-park" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="heading" data-choice="Breakfast Grocery Farewell">
-                <h3>🍳 Breakfast at Beaufort Grocery</h3>
-                <p>A final Beaufort meal before the drive.</p>
-                <div class="distance-line">
-                    <span>🚶 4 min</span><br>
-                    <span>🚗 1 min</span>
-                </div>
+            <div class="choice-card" data-section="breakfast" data-choice="Beaufort Grocery Breakfast">
+                <h3>🍳 Beaufort Grocery</h3>
+                <p>A warm breakfast before the drive.</p>
                 <a class="card-link" href="https://www.beaufortgrocery.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
             </div>
 
-            <div class="choice-card" data-section="heading" data-choice="Head Back Home">
-                <h3>🚗 Head Back Home</h3>
-                <p>Skip the stops and head straight home after lunch.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 Drive home</span>
-                </div>
+            <div class="choice-card" data-section="breakfast" data-choice="Dancing Baristas Breakfast">
+                <h3>🥐 Dancing Baristas</h3>
+                <p>Great coffee and breakfast sandwiches.</p>
+                <a class="card-link" href="https://www.facebook.com/dancingbaristas/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="breakfast" data-choice="Beaufort Cafe Breakfast">
+                <h3>🍳 Beaufort Café</h3>
+                <p>Classic southern breakfast favorites.</p>
+                <a class="card-link" href="https://www.facebook.com/beaufortcafe/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MIDDAY PATHWAYS -->
+    <section class="section" id="midday-section">
+        <h2>Midday Path – Choose One</h2>
+
+        <div class="choices-container">
+
+            <!-- Beaufort -->
+            <div class="choice-card" data-section="midday" data-choice="Stay in Beaufort">
+                <h3>🌿 Stay in Beaufort</h3>
+                <p>Waterfront walk, museum, Rachel Carson, or kayaking.</p>
+            </div>
+
+            <!-- New Bern -->
+            <div class="choice-card" data-section="midday" data-choice="Head to New Bern">
+                <h3>🏙️ Head Toward New Bern</h3>
+                <p>Scenic drive, downtown exploring, waterfront walk, shops.</p>
+            </div>
+
+            <!-- Morehead City -->
+            <div class="choice-card" data-section="midday" data-choice="Head to Morehead City">
+                <h3>🌊 Head Toward Morehead City / Atlantic Beach</h3>
+                <p>Scenic drive, boardwalk, Fort Macon.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LUNCH -->
+    <section class="section" id="lunch-section">
+        <h2>Lunch – Choose One</h2>
+
+        <div class="choices-container">
+
+            <!-- Beaufort Lunch -->
+            <div class="choice-card" data-section="lunch" data-choice="Beaufort Lunch">
+                <h3>🍽️ Lunch in Beaufort</h3>
+                <p>Moonrakers, Aqua, Grocery, Black Sheep, Finz, Floyd’s.</p>
+            </div>
+
+            <!-- New Bern Lunch -->
+            <div class="choice-card" data-section="lunch" data-choice="New Bern Lunch">
+                <h3>🍽️ Lunch in New Bern</h3>
+                <p>Persimmons, Cypress Hall, Chelsea, Baker’s Kitchen, MJ’s, Ratty’s.</p>
+            </div>
+
+            <!-- Morehead Lunch -->
+            <div class="choice-card" data-section="lunch" data-choice="Morehead Lunch">
+                <h3>🍽️ Lunch in Morehead City</h3>
+                <p>Southern Salt, Ruddy Duck, Red Fish Grill, Full Moon, Off the Hook, Amos Mosquito’s.</p>
+            </div>
+
+            <!-- Fast Food -->
+            <div class="choice-card" data-section="lunch" data-choice="Fast Food Lunch">
+                <h3>🍔 Fast Food on the Way</h3>
+                <p>Quick bite: Chick‑fil‑A, Bojangles, McDonald’s.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AFTERNOON -->
+    <section class="section" id="afternoon-section">
+        <h2>Afternoon – Choose One</h2>
+
+        <div class="choices-container">
+
+            <!-- Parcels -->
+            <div class="choice-card" data-section="afternoon" data-choice="Parcel Scouting">
+                <h3>🏝️ Parcel Scouting</h3>
+                <p>Merrimon, Garbacon, Jade Point, Clubfoot, Pelletier.</p>
+            </div>
+
+            <!-- Scenic Drives -->
+            <div class="choice-card" data-section="afternoon" data-choice="Scenic Drives">
+                <h3>🚗 Scenic Drives</h3>
+                <p>Harlowe, Core Creek, Nine Mile Road, Harkers Island.</p>
+            </div>
+
+            <!-- Head Home After Lunch -->
+            <div class="choice-card" data-section="afternoon" data-choice="Head Home After Lunch">
+                <h3>🚗 Head Home After Lunch</h3>
+                <p>Skip the stops and head straight home.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL OPTION -->
+    <section class="section" id="final-section">
+        <h2>Final Option</h2>
+
+        <div class="choices-container">
+
+            <div class="choice-card" data-section="final" data-choice="Head Back Home">
+                <h3>🏠 Head Back Home</h3>
+                <p>Drive home whenever you're ready.</p>
             </div>
 
         </div>
@@ -261,12 +331,24 @@
     });
 
     function validateAndNext() {
-        const heading = localStorage.getItem('day3-heading');
+        const breakfast = localStorage.getItem('day3-breakfast');
+        const midday = localStorage.getItem('day3-midday');
+        const lunch = localStorage.getItem('day3-lunch');
+        const afternoon = localStorage.getItem('day3-afternoon');
 
-        if (!heading) {
+        if (!breakfast || !midday || !lunch || !afternoon) {
             const error = document.getElementById('error-message');
             error.style.display = 'block';
-            document.getElementById('heading-section').scrollIntoView({ behavior: 'smooth' });
+
+            if (!breakfast) {
+                document.getElementById('breakfast-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (!midday) {
+                document.getElementById('midday-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (!lunch) {
+                document.getElementById('lunch-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (!afternoon) {
+                document.getElementById('afternoon-section').scrollIntoView({ behavior: 'smooth' });
+            }
             return;
         }
 
