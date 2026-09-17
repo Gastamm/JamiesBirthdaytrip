@@ -311,34 +311,32 @@
         });
     });
 
-    function validateAndNext() {
-        const breakfast = localStorage.getItem('day3-breakfast');
-        const midday = localStorage.getItem('day3-midday');
-        const lunch = localStorage.getItem('day3-lunch');
-        const afternoon = localStorage.getItem('day3-afternoon');
+  function validateAndNext() {
+    const breakfast = localStorage.getItem('day3-breakfast');
+    const midday = localStorage.getItem('day3-midday');
+    const lunch = localStorage.getItem('day3-lunch');
+    const afternoon = localStorage.getItem('day3-afternoon');
 
-        if (!breakfast || !midday || !lunch || !afternoon) {
-            const error = document.getElementById('error-message');
-            error.style.display = 'block';
+    if (!breakfast || !midday || !lunch || !afternoon) {
+        const error = document.getElementById('error-message');
+        error.style.display = 'block';
 
-            if (!breakfast) {
-                document.getElementById('breakfast-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!midday) {
-                document.getElementById('midday-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!lunch) {
-                document.getElementById('lunch-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!afternoon) {
-                document.getElementById('afternoon-section').scrollIntoView({ behavior: 'smooth' });
-            }
-            return;
+        if (!breakfast) {
+            document.getElementById('breakfast-section').scrollIntoView({ behavior: 'smooth' });
+        } else if (!midday) {
+            document.getElementById('midday-section').scrollIntoView({ behavior: 'smooth' });
+        } else if (!lunch) {
+            document.getElementById('lunch-section').scrollIntoView({ behavior: 'smooth' });
+        } else if (!afternoon) {
+            document.getElementById('afternoon-section').scrollIntoView({ behavior: 'smooth' });
         }
-
-        window.location.href = 'itinerary.html';
+        return;
     }
 
-    function goBack(page) {
-        window.location.href = page;
-    }
+    // FIXED — send to the correct itinerary page
+    window.location.href = 'itinerary.html';
+}
+
 </script>
 
 </body>
