@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -22,155 +22,143 @@
             background: url('images/marina-wood.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.10;
-            pointer-events: none;
+            opacity: 0.25;
+            z-index: -1;
         }
 
-        .page-wrapper {
+        .container {
             max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
+            margin: auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 2.6rem;
+            font-size: 42px;
             margin-bottom: 10px;
-        }
-
-        .subtitle {
             text-align: center;
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 30px;
         }
 
-        .itinerary-section {
-            background: #ffffffd9;
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin: 25px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-        }
-
-        .itinerary-section h2 {
+        h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            margin-top: 40px;
+            font-size: 28px;
         }
 
-        .item {
-            font-size: 1.1rem;
-            margin: 6px 0;
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .value {
+            font-size: 18px;
+            margin-left: 6px;
+        }
+
+        .btn-row {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
         }
 
         .print-btn {
-            background-color: #444;
+            background: #2a5dff;
             color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-            margin-right: 10px;
-        }
-
-        .print-btn:hover {
-            background-color: #222;
         }
 
         .restart-btn {
-            background-color: #0077aa;
+            background: #444;
             color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-        }
-
-        .restart-btn:hover {
-            background-color: #005f85;
-        }
-
-        .nav-buttons {
-            text-align: center;
-            margin-top: 40px;
         }
     </style>
 </head>
 
-<body onload="loadItinerary()">
+<body>
+    <div class="container">
+        <h1>Here Is Your Curated Beaufort Birthday Adventure</h1>
 
-<div class="page-wrapper">
-
-    <h1>Here is your curated Beaufort birthday adventure</h1>
-    <p class="subtitle">A personalized weekend crafted from every choice you made.</p>
-
-    <!-- ARRIVAL -->
-    <div class="itinerary-section">
+        <!-- ARRIVAL -->
         <h2>Arrival</h2>
-        <div class="item"><strong>Arrival Vibe:</strong> <span id="arrival"></span></div>
-        <div class="item"><strong>Arrival Drinks:</strong> <span id="arrival_drinks"></span></div>
-    </div>
+        <div class="section">
+            <div><span class="label">Arrival Vibe:</span> <span id="arrival"></span></div>
+            <div><span class="label">Arrival Drinks:</span> <span id="arrival_drinks"></span></div>
+        </div>
 
-    <!-- DAY 1 DINNER -->
-    <div class="itinerary-section">
+        <!-- DAY 1 DINNER -->
         <h2>Birthday Dinner (Day 1)</h2>
-        <div class="item"><strong>Dinner:</strong> <span id="dinner"></span></div>
-    </div>
+        <div class="section">
+            <div><span class="label">Dinner:</span> <span id="dinner"></span></div>
+        </div>
 
-    <!-- DAY 2 -->
-    <div class="itinerary-section">
+        <!-- DAY 2 -->
         <h2>Day 2</h2>
-        <div class="item"><strong>Breakfast:</strong> <span id="day2_breakfast"></span></div>
-        <div class="item"><strong>Morning Activity:</strong> <span id="day2_morning"></span></div>
-        <div class="item"><strong>Lunch:</strong> <span id="day2_lunch"></span></div>
-        <div class="item"><strong>Afternoon Exploration:</strong> <span id="day2_afternoon"></span></div>
-        <div class="item"><strong>Dinner:</strong> <span id="day2_dinner"></span></div>
-        <div class="item"><strong>Drinks:</strong> <span id="day2_drinks"></span></div>
-    </div>
+        <div class="section">
+            <div><span class="label">Breakfast:</span> <span id="day2-breakfast"></span></div>
+            <div><span class="label">Morning Activity:</span> <span id="day2-morning"></span></div>
+            <div><span class="label">Lunch:</span> <span id="day2-lunch"></span></div>
+            <div><span class="label">Afternoon Exploration:</span> <span id="day2-afternoon"></span></div>
+            <div><span class="label">Dinner:</span> <span id="day2-dinner"></span></div>
+            <div><span class="label">Drinks:</span> <span id="day2-drinks"></span></div>
+        </div>
 
-    <!-- DAY 3 -->
-    <div class="itinerary-section">
+        <!-- DAY 3 -->
         <h2>Day 3</h2>
-        <div class="item"><strong>Breakfast:</strong> <span id="day3_breakfast"></span></div>
-        <div class="item"><strong>Midday Path:</strong> <span id="day3_midday"></span></div>
-        <div class="item"><strong>Lunch:</strong> <span id="day3_lunch"></span></div>
-        <div class="item"><strong>Afternoon:</strong> <span id="day3_afternoon"></span></div>
+        <div class="section">
+            <div><span class="label">Breakfast:</span> <span id="day3-breakfast"></span></div>
+            <div><span class="label">Midday Path:</span> <span id="day3-midday"></span></div>
+            <div><span class="label">Lunch:</span> <span id="day3-lunch"></span></div>
+            <div><span class="label">Afternoon:</span> <span id="day3-afternoon"></span></div>
+        </div>
+
+        <div class="btn-row">
+            <button class="btn print-btn" onclick="window.print()">Download / Print</button>
+            <button class="btn restart-btn" onclick="window.location.href='index.html'">Start Over</button>
+        </div>
     </div>
 
-    <!-- BUTTONS -->
-    <div class="nav-buttons">
-        <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
-        <button class="restart-btn" onclick="restart()">Start Over</button>
-    </div>
-
-</div>
-
-<script>
-    function loadItinerary() {
+    <script>
+        // These are ALL the keys your other pages actually save.
         const fields = [
-            'arrival', 'arrival_drinks', 'dinner',
-            'day2_breakfast', 'day2_morning', 'day2_lunch', 'day2_afternoon', 'day2_dinner', 'day2_drinks',
-            'day3_breakfast', 'day3_midday', 'day3_lunch', 'day3_afternoon'
+            'arrival',
+            'arrival_drinks',
+            'dinner',
+
+            'day2-breakfast',
+            'day2-morning',
+            'day2-lunch',
+            'day2-afternoon',
+            'day2-dinner',
+            'day2-drinks',
+
+            'day3-breakfast',
+            'day3-midday',
+            'day3-lunch',
+            'day3-afternoon'
         ];
 
         fields.forEach(key => {
-            const value = localStorage.getItem(key) || 'Not selected';
+            const value = localStorage.getItem(key);
             const element = document.getElementById(key);
-            if (element) element.innerText = value;
+
+            if (element) {
+                element.textContent = value ? value : "Not selected";
+            }
         });
-    }
-
-    function restart() {
-        localStorage.clear();
-        window.location.href = 'index.html';
-    }
-</script>
-
+    </script>
 </body>
 </html>
+
