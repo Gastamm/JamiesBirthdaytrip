@@ -15,26 +15,26 @@
             background: #ffffff;
         }
 
-        /* BEACH BACKGROUND */
+        /* BEACH BACKGROUND — BEAUFORT 2 */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
-            background: url('images/faint-beach-texture.jpg');
+            background: url('images/beaufort 2.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.30; /* stronger so it's clearly visible */
-            filter: blur(1.5px);
+            opacity: 0.40; /* clearly visible */
+            filter: blur(1px);
             z-index: -1;
         }
 
         /* FLOATING CARD CONTAINER */
         .container {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 60px auto; /* gives space so background shows */
             padding: 40px;
 
-            background: rgba(255, 255, 255, 0.78); /* lets background show through */
+            background: rgba(255, 255, 255, 0.75); /* lets background show through */
             border-radius: 14px;
 
             box-shadow:
@@ -176,5 +176,6 @@
     </script>
 </body>
 </html>
+
 
 
