@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -15,54 +15,69 @@
             background: #ffffff;
         }
 
+        /* FAINT BEACH TEXTURE BACKGROUND */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
-            background: url('images/marina-wood.jpg');
+            background: url('images/faint-beach-texture.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.25;
+            opacity: 0.18;        /* soft + subtle */
+            filter: blur(1.5px);  /* keeps text crisp */
             z-index: -1;
         }
 
         .container {
             max-width: 900px;
             margin: auto;
-            padding: 40px;
+            padding: 50px;
             background: rgba(255, 255, 255, 0.92);
-            border-radius: 12px;
+            border-radius: 14px;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 42px;
-            margin-bottom: 10px;
             text-align: center;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            color: #003049;
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
-            margin-top: 40px;
-            font-size: 28px;
+            font-size: 30px;
+            margin-top: 50px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(0,0,0,0.15);
+            padding-bottom: 6px;
+            color: #003049;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        .section div {
+            margin: 12px 0;
         }
 
         .label {
-            font-weight: bold;
+            font-weight: 600;
             font-size: 18px;
+            color: #003049;
         }
 
         .value {
             font-size: 18px;
-            margin-left: 6px;
+            color: #1a1a1a;
         }
 
         .btn-row {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
         }
 
@@ -89,33 +104,33 @@
 
 <body>
     <div class="container">
-        <h1>Here Is Your Curated Beaufort Birthday Adventure</h1>
+        <h1>Your Curated Beaufort Birthday Adventure</h1>
 
         <!-- DAY 1 DINNER -->
         <h2>Birthday Dinner (Day 1)</h2>
         <div class="section">
-            <div><span class="label">Dinner:</span> <span id="dinner-drinks-dinner"></span></div>
-            <div><span class="label">Drinks:</span> <span id="dinner-drinks-drinks"></span></div>
+            <div><span class="label">Dinner:</span> <span id="dinner-drinks-dinner" class="value"></span></div>
+            <div><span class="label">Drinks:</span> <span id="dinner-drinks-drinks" class="value"></span></div>
         </div>
 
         <!-- DAY 2 -->
         <h2>Day 2</h2>
         <div class="section">
-            <div><span class="label">Breakfast:</span> <span id="day2-breakfast"></span></div>
-            <div><span class="label">Morning Activity:</span> <span id="day2-morning"></span></div>
-            <div><span class="label">Lunch:</span> <span id="day2-lunch"></span></div>
-            <div><span class="label">Afternoon Exploration:</span> <span id="day2-afternoon"></span></div>
-            <div><span class="label">Dinner:</span> <span id="day2-dinner"></span></div>
-            <div><span class="label">Drinks:</span> <span id="day2-drinks"></span></div>
+            <div><span class="label">Breakfast:</span> <span id="day2-breakfast" class="value"></span></div>
+            <div><span class="label">Morning Activity:</span> <span id="day2-morning" class="value"></span></div>
+            <div><span class="label">Lunch:</span> <span id="day2-lunch" class="value"></span></div>
+            <div><span class="label">Afternoon Exploration:</span> <span id="day2-afternoon" class="value"></span></div>
+            <div><span class="label">Dinner:</span> <span id="day2-dinner" class="value"></span></div>
+            <div><span class="label">Drinks:</span> <span id="day2-drinks" class="value"></span></div>
         </div>
 
         <!-- DAY 3 -->
         <h2>Day 3</h2>
         <div class="section">
-            <div><span class="label">Breakfast:</span> <span id="day3-breakfast"></span></div>
-            <div><span class="label">Midday Path:</span> <span id="day3-midday"></span></div>
-            <div><span class="label">Lunch:</span> <span id="day3-lunch"></span></div>
-            <div><span class="label">Afternoon:</span> <span id="day3-afternoon"></span></div>
+            <div><span class="label">Breakfast:</span> <span id="day3-breakfast" class="value"></span></div>
+            <div><span class="label">Midday Path:</span> <span id="day3-midday" class="value"></span></div>
+            <div><span class="label">Lunch:</span> <span id="day3-lunch" class="value"></span></div>
+            <div><span class="label">Afternoon:</span> <span id="day3-afternoon" class="value"></span></div>
         </div>
 
         <div class="btn-row">
@@ -125,7 +140,6 @@
     </div>
 
     <script>
-        // ALL keys your pages save
         const fields = [
             'dinner-drinks-dinner',
             'dinner-drinks-drinks',
@@ -154,3 +168,4 @@
     </script>
 </body>
 </html>
+
