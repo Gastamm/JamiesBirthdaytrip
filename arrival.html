@@ -18,6 +18,19 @@
             padding: 0;
         }
 
+        /* FAINT BEACH TEXTURE BACKGROUND — ADDED */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url('images/faint-beach-texture.jpg'); /* your beach texture file */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.18;        /* subtle */
+            filter: blur(1.5px);  /* keeps text crisp */
+            z-index: -1;
+        }
+
         /* HERO SECTION */
         .hero {
             position: relative;
@@ -261,3 +274,4 @@
 
 </body>
 </html>
+
