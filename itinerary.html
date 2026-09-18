@@ -15,7 +15,7 @@
             background: #ffffff;
         }
 
-        /* FAINT BEACH TEXTURE BACKGROUND */
+        /* BEACH BACKGROUND */
         body::before {
             content: "";
             position: fixed;
@@ -23,33 +23,40 @@
             background: url('images/faint-beach-texture.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.18;        /* soft + subtle */
-            filter: blur(1.5px);  /* keeps text crisp */
+            opacity: 0.30; /* stronger so it's clearly visible */
+            filter: blur(1.5px);
             z-index: -1;
         }
 
+        /* FLOATING CARD CONTAINER */
         .container {
             max-width: 900px;
-            margin: auto;
-            padding: 50px;
-            background: rgba(255, 255, 255, 0.92);
+            margin: 40px auto;
+            padding: 40px;
+
+            background: rgba(255, 255, 255, 0.78); /* lets background show through */
             border-radius: 14px;
+
+            box-shadow:
+                0 8px 24px rgba(0,0,0,0.12),
+                0 4px 12px rgba(0,0,0,0.08);
+
+            backdrop-filter: blur(3px); /* coastal modern glass effect */
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 42px;
+            margin-bottom: 10px;
             text-align: center;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
             color: #003049;
+            letter-spacing: 0.5px;
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 30px;
-            margin-top: 50px;
-            margin-bottom: 15px;
+            margin-top: 40px;
+            font-size: 28px;
             letter-spacing: 0.5px;
             border-bottom: 1px solid rgba(0,0,0,0.15);
             padding-bottom: 6px;
@@ -57,7 +64,7 @@
         }
 
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             padding-bottom: 20px;
         }
 
@@ -73,11 +80,12 @@
 
         .value {
             font-size: 18px;
+            margin-left: 6px;
             color: #1a1a1a;
         }
 
         .btn-row {
-            margin-top: 50px;
+            margin-top: 40px;
             text-align: center;
         }
 
@@ -168,4 +176,5 @@
     </script>
 </body>
 </html>
+
 
