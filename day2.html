@@ -15,15 +15,18 @@
             background: #ffffff;
         }
 
+        /* DAY 2 BACKGROUND — BEAUFORT 2 */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
-            background: url('images/marina-wood.jpg');
+            background: url('images/beaufort 2.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.10;
+            opacity: 0.40;
+            filter: blur(1px);
             pointer-events: none;
+            z-index: -1;
         }
 
         .page-wrapper {
@@ -165,6 +168,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <div class="page-wrapper">
@@ -397,36 +401,6 @@
                 <a class="card-link" href="https://www.fishtownebrewhouse.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
-            <div class="choice-card" data-section="afternoon" data-choice="Beaufort Spirits Company Afternoon">
-                <h3>🥃 Beaufort Spirits Company</h3>
-                <p>Small‑batch rum, whiskey, and craft spirits.</p>
-                <div class="distance-line">
-                    <span>🚶 10 min</span><br>
-                    <span>🚗 4 min</span>
-                </div>
-                <a class="card-link" href="https://beaufortspiritscompany.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="afternoon" data-choice="Crystal Coast Brewing Afternoon">
-                <h3>🍺 Crystal Coast Brewing</h3>
-                <p>Craft beer brewed right on the coast.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 18 min</span>
-                </div>
-                <a class="card-link" href="https://crystalcoastbrewingcompany.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="afternoon" data-choice="Shortway Brewing Afternoon">
-                <h3>🍺 Shortway Brewing</h3>
-                <p>Family‑owned brewery with great atmosphere.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 25 min</span>
-                </div>
-                <a class="card-link" href="https://shortwaybrewing.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
         </div>
     </section>
 
@@ -436,54 +410,73 @@
 
         <div class="choices-container">
 
-            <div class="choice-card" data-section="dinner" data-choice="Moonrakers">
+            <div class="choice-card" data-section="dinner" data-choice="Moonrakers Dinner">
                 <h3>🍽️ Moonrakers</h3>
-                <p>Upscale waterfront dining with rooftop seating and refined coastal cuisine.</p>
+                <p>Elegant waterfront dining with rooftop seating.</p>
                 <div class="distance-line">
                     <span>🚶 3 min</span><br>
                     <span>🚗 1 min</span>
                 </div>
-                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
             </div>
 
-            <div class="choice-card" data-section="dinner" data-choice="Aqua">
-                <h3>🍸 Aqua Restaurant</h3>
-                <p>Small plates, craft cocktails, and an intimate ambiance.</p>
+            <div class="choice-card" data-section="dinner" data-choice="Aqua Dinner">
+                <h3>🍽️ Aqua</h3>
+                <
+                        <!-- DINNER -->
+    <section class="section" id="dinner-section">
+        <h2>Dinner – Choose One</h2>
+
+        <div class="choices-container">
+
+            <div class="choice-card" data-section="dinner" data-choice="Moonrakers Dinner">
+                <h3>🍽️ Moonrakers</h3>
+                <p>Elegant waterfront dining with rooftop seating.</p>
+                <div class="distance-line">
+                    <span>🚶 3 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
+            </div>
+
+            <div class="choice-card" data-section="dinner" data-choice="Aqua Dinner">
+                <h3>🍽️ Aqua</h3>
+                <p>Coastal cuisine with craft cocktails and a boutique atmosphere.</p>
                 <div class="distance-line">
                     <span>🚶 2 min</span><br>
                     <span>🚗 1 min</span>
                 </div>
-                <a class="card-link" href="https://aquaexperience.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
             </div>
 
-            <div class="choice-card" data-section="dinner" data-choice="Beaufort Grocery Co">
-                <h3>🥗 Beaufort Grocery Co.</h3>
-                <p>Local favorite offering refined coastal dishes in a charming bistro setting.</p>
+            <div class="choice-card" data-section="dinner" data-choice="Beaufort Grocery Dinner">
+                <h3>🍽️ Beaufort Grocery Co.</h3>
+                <p>Refined coastal dishes and local favorites.</p>
                 <div class="distance-line">
                     <span>🚶 4 min</span><br>
                     <span>🚗 1 min</span>
                 </div>
-                <a class="card-link" href="https://beaufortgrocery.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <a class="card-link" href="https://www.beaufortgrocery.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
             </div>
 
-            <div class="choice-card" data-section="dinner" data-choice="Front Street Grill">
-                <h3>🐟 Front Street Grill</h3>
-                <p>Seafood-forward menu with waterfront seating and classic Beaufort charm.</p>
+            <div class="choice-card" data-section="dinner" data-choice="Floyds Dinner">
+                <h3>🍽️ Floyd’s 1921</h3>
+                <p>Southern coastal cuisine in a historic home.</p>
                 <div class="distance-line">
-                    <span>🚶 3 min</span><br>
-                    <span>🚗 1 min</span>
+                    <span>🚶 12 min</span><br>
+                    <span>🚗 5 min</span>
                 </div>
-                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <a class="card-link" href="https://www.floyds1921.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
             </div>
 
-            <div class="choice-card" data-section="dinner" data-choice="Black Sheep">
+            <div class="choice-card" data-section="dinner" data-choice="Black Sheep Dinner">
                 <h3>🍕 Black Sheep</h3>
-                <p>Casual dining with excellent sandwiches, pizza, and a lively local vibe.</p>
+                <p>Waterfront pizza and cocktails with a lively vibe.</p>
                 <div class="distance-line">
                     <span>🚶 5 min</span><br>
                     <span>🚗 2 min</span>
                 </div>
-                <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+                <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Menu</a>
             </div>
 
         </div>
@@ -495,9 +488,49 @@
 
         <div class="choices-container">
 
-            <div class="choice-card" data-section="drinks" data-choice="Fishtowne Brew House">
+            <div class="choice-card" data-section="drinks" data-choice="Aqua Bar Drinks">
+                <h3>🍸 Aqua Bar</h3>
+                <p>Craft cocktails, wine, and a cozy bar atmosphere.</p>
+                <div class="distance-line">
+                    <span>🚶 2 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+                <a class="card-link" href="https://aquabeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Moonrakers Rooftop Drinks">
+                <h3>🍹 Moonrakers Rooftop</h3>
+                <p>Drinks on the rooftop with waterfront views.</p>
+                <div class="distance-line">
+                    <span>🚶 3 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+                <a class="card-link" href="https://moonrakersbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Front Street Grill Bar Drinks">
+                <h3>🍺 Front Street Grill Bar</h3>
+                <p>Casual bar with beer, cocktails, and dockside atmosphere.</p>
+                <div class="distance-line">
+                    <span>🚶 3 min</span><br>
+                    <span>🚗 1 min</span>
+                </div>
+                <a class="card-link" href="https://frontstreetgrillatstillwater.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Black Sheep Drinks">
+                <h3>🍷 Black Sheep Drinks</h3>
+                <p>Relaxed spot for drinks with pizza and sandwiches.</p>
+                <div class="distance-line">
+                    <span>🚶 5 min</span><br>
+                    <span>🚗 2 min</span>
+                </div>
+                <a class="card-link" href="https://blacksheepbeaufort.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
+            <div class="choice-card" data-section="drinks" data-choice="Fishtowne Brew House Drinks">
                 <h3>🍺 Fishtowne Brew House</h3>
-                <p>Local Beaufort brewery with small-batch craft beer and a cozy taproom.</p>
+                <p>Local Beaufort brewery with small‑batch craft beer.</p>
                 <div class="distance-line">
                     <span>🚶 7 min</span><br>
                     <span>🚗 3 min</span>
@@ -505,69 +538,9 @@
                 <a class="card-link" href="https://www.fishtownebrewhouse.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
-            <div class="choice-card" data-section="drinks" data-choice="Beaufort Spirits Company">
-                <h3>🥃 Beaufort Spirits Company</h3>
-                <p>Small-batch rum, whiskey, and craft spirits in Beaufort.</p>
-                <div class="distance-line">
-                    <span>🚶 10 min</span><br>
-                    <span>🚗 4 min</span>
-                </div>
-                <a class="card-link" href="https://beaufortspiritscompany.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Crystal Coast Brewing">
-                <h3>🍺 Crystal Coast Brewing</h3>
-                <p>Craft beer brewed right on the coast in Atlantic Beach.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 18 min</span>
-                </div>
-                <a class="card-link" href="https://crystalcoastbrewingcompany.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Shortway Brewing">
-                <h3>🍺 Shortway Brewing</h3>
-                <p>Family-owned brewery with a welcoming atmosphere in Newport.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 25 min</span>
-                </div>
-                <a class="card-link" href="https://shortwaybrewing.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Tap That">
-                <h3>🍺 Tap That</h3>
-                <p>Morehead City taproom with rotating craft beer selection.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 20 min</span>
-                </div>
-                <a class="card-link" href="https://www.tapthatbeerandwine.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Brewery 99">
-                <h3>🍺 Brewery 99</h3>
-                <p>Small-batch brewery with a local vibe in New Bern.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 45 min</span>
-                </div>
-                <a class="card-link" href="https://brewery99.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Sinners and Saints Distillery">
-                <h3>🥃 Sinner’s & Saints Distillery</h3>
-                <p>Craft spirits with a unique tasting room in Morehead City.</p>
-                <div class="distance-line">
-                    <span>🚶 0 min</span><br>
-                    <span>🚗 20 min</span>
-                </div>
-                <a class="card-link" href="https://www.sinnersandsaintsdistillery.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
-            </div>
-
-            <div class="choice-card" data-section="drinks" data-choice="Beaufort Distilling Co">
+            <div class="choice-card" data-section="drinks" data-choice="Beaufort Distilling Drinks">
                 <h3>🥃 Beaufort Distilling Co.</h3>
-                <p>Craft rum and whiskey distilled in Beaufort with a welcoming tasting room.</p>
+                <p>Craft rum and whiskey with a welcoming tasting room.</p>
                 <div class="distance-line">
                     <span>🚶 10 min</span><br>
                     <span>🚗 4 min</span>
@@ -575,11 +548,17 @@
                 <a class="card-link" href="https://www.beaufortdistilling.com/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
             </div>
 
+            <div class="choice-card" data-section="drinks" data-choice="Relax at the Inn Drinks">
+                <h3>🛏️ Relax at the Inn</h3>
+                <p>Skip the bar scene and unwind at the Inlet Inn with a quiet drink.</p>
+                <a class="card-link" href="https://inlet-inn.com/features-amenities/" target="_blank" onclick="event.stopPropagation()">Learn More</a>
+            </div>
+
         </div>
     </section>
 
     <div class="nav-buttons">
-        <button class="back-btn" onclick="goBack('arrival.html')">Back</button>
+        <button class="back-btn" onclick="goBack('dinner-and-drinks.html')">Back</button>
         <button class="next-btn" onclick="validateAndNext()">Next</button>
     </div>
 </div>
@@ -605,29 +584,30 @@
     });
 
     function validateAndNext() {
-        const breakfast = localStorage.getItem('day2-breakfast');
-        const midday = localStorage.getItem('day2-midday');
-        const lunch = localStorage.getItem('day2-lunch');
-        const afternoon = localStorage.getItem('day2-afternoon');
-        const dinner = localStorage.getItem('day2-dinner');
-        const drinks = localStorage.getItem('day2-drinks');
+        const requiredSections = [
+            'breakfast',
+            'midday',
+            'lunch',
+            'afternoon',
+            'dinner',
+            'drinks'
+        ];
 
-        if (!breakfast || !midday || !lunch || !afternoon || !dinner || !drinks) {
+        let missing = [];
+
+        requiredSections.forEach(section => {
+            const choice = localStorage.getItem(`day2-${section}`);
+            if (!choice) missing.push(section);
+        });
+
+        if (missing.length > 0) {
             const error = document.getElementById('error-message');
             error.style.display = 'block';
 
-            if (!breakfast) {
-                document.getElementById('breakfast-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!midday) {
-                document.getElementById('midday-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!lunch) {
-                document.getElementById('lunch-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!afternoon) {
-                document.getElementById('afternoon-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!dinner) {
-                document.getElementById('dinner-section').scrollIntoView({ behavior: 'smooth' });
-            } else if (!drinks) {
-                document.getElementById('drinks-section').scrollIntoView({ behavior: 'smooth' });
+            const firstMissing = missing[0];
+            const sectionElement = document.getElementById(`${firstMissing}-section`);
+            if (sectionElement) {
+                sectionElement.scrollIntoView({ behavior: 'smooth' });
             }
             return;
         }
@@ -642,3 +622,4 @@
 
 </body>
 </html>
+
